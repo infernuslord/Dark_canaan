@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "actmovie", "tech\libsrc\actmovie\actmovie.vcproj", "{7741D27B-DBBE-42D7-B2D9-29E7A25EAAF5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cpptools", "tech\libsrc\cpptools\cpptools.vcproj", "{FF01C01C-26B5-40A5-AA15-B89205DDD98D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7741D27B-DBBE-42D7-B2D9-29E7A25EAAF5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7741D27B-DBBE-42D7-B2D9-29E7A25EAAF5}.Debug|Win32.Build.0 = Debug|Win32
+		{7741D27B-DBBE-42D7-B2D9-29E7A25EAAF5}.Release|Win32.ActiveCfg = Release|Win32
+		{7741D27B-DBBE-42D7-B2D9-29E7A25EAAF5}.Release|Win32.Build.0 = Release|Win32
+		{FF01C01C-26B5-40A5-AA15-B89205DDD98D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FF01C01C-26B5-40A5-AA15-B89205DDD98D}.Debug|Win32.Build.0 = Debug|Win32
+		{FF01C01C-26B5-40A5-AA15-B89205DDD98D}.Release|Win32.ActiveCfg = Release|Win32
+		{FF01C01C-26B5-40A5-AA15-B89205DDD98D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
