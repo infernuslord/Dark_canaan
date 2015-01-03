@@ -18,39 +18,16 @@
 
 //include "storintr.h"
 
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 // CLASS: cDynArrayBase
 //
 
 #ifndef SHIP
-char BASED_CODE cDynArrayBase::gm_pszOutOfRange[] = "Index out of range";
+//char BASED_CODE cDynArrayBase::gm_pszOutOfRange[] = "Index out of range";
+const char BASED_CODE cDABaseSrvFns::gm_pszOutOfRange[] = "Index out of range";
 #endif
-
-///////////////////////////////////////
-//
-// Assignment operator
-//
-
-cDynArrayBase& cDynArrayBase::operator=(const cDynArrayBase &Array)
-{
-    // Blow the current array away
-    SetSize(0);
-
-    // Copy the values
-    m_nBlockSizeLessOne = Array.m_nBlockSizeLessOne;
-    m_nItemSize = Array.m_nItemSize;
-    m_nItems = Array.m_nItems;
-    VerifyMsg(Resize(m_nItems), "Array allocation failed");
-
-    AssertMsg(!m_nItems || m_pItems, "Expected items in dynarray");
-
-    // Call set item for all the items
-    for (index_t i = 0; i<m_nItems; i++)
-        SetItem(Array.ItemPtr(i), i);
-
-    return *this;
-}
 
 ///////////////////////////////////////
 //
@@ -58,37 +35,77 @@ cDynArrayBase& cDynArrayBase::operator=(const cDynArrayBase &Array)
 //
 // NOTE: The logical size does not change.
 //
-
-BOOL cDynArrayBase::DoResize(index_t evenSlots)
+//BOOL cDynArrayBase::DoResize(index_t evenSlots)
+BOOL cDABaseSrvFns::DoResize(void ** ppItems, unsigned nItemSize, unsigned nNewSlots)
 {
-    if (evenSlots)
-    {
-        tDynArrayItem *newP;
+	if (nNewSlots)
+	{
+		void *pNew;
 
-        // Note: Allow for scratch block at the end
-        if (m_pItems)
-            newP = realloc(m_pItems, (evenSlots+1) * m_nItemSize);
-        else
-            newP = malloc((evenSlots+1) * m_nItemSize);
+		// Note: Allow for scratch block at the end
+		//if (m_pItems)
+		//	pNew = realloc(m_pItems, (evenSlots+1) * m_nItemSize);
+		//else
+		//	pNew = malloc((evenSlots+1) * m_nItemSize);
+		//if ( *ppItems )
+		//	pNew = f_realloc_db(*ppItems, nItemSize * nNewSlots, "x:\\prj\\tech\\libsrc\\cpptools\\dynarray.cpp", 89);
+		//else
+		//	pNew = f_malloc_db(nItemSize * nNewSlots, "x:\\prj\\tech\\libsrc\\cpptools\\dynarray.cpp", 91);
+		if ( *ppItems )
+			pNew = realloc(*ppItems, nItemSize * nNewSlots);
+		else
+			pNew = malloc(nItemSize * nNewSlots);
 
-        AssertMsg(newP, "Dynamic array resize failed");
+		if (!pNew)
+			AssertMsg(pNew, "Dynamic array resize failed");
 
-        if (!newP)
-            return FALSE;
+		if (!pNew)
+			return FALSE;
 
-        m_pItems = (BYTE *) newP;
-    }
+		*ppItems = pNew;
+	}
+	else if (*ppItems)
+	{
+		free(ppItems);
+		ppItems = 0;
+	}
 
-    else if (m_pItems)
-    {
-        free(m_pItems);
-        m_pItems = 0;
-    }
+	//m_nSlots = nNewSlots;
 
-    m_nSlots = evenSlots;
-
-    return TRUE;
+	return TRUE;
 }
+
+
+
+/*
+///////////////////////////////////////
+//
+// Assignment operator
+//
+
+cDynArrayBase& cDynArrayBase::operator=(const cDynArrayBase &Array)
+{
+// Blow the current array away
+SetSize(0);
+
+// Copy the values
+m_nBlockSizeLessOne = Array.m_nBlockSizeLessOne;
+m_nItemSize = Array.m_nItemSize;
+m_nItems = Array.m_nItems;
+VerifyMsg(Resize(m_nItems), "Array allocation failed");
+
+AssertMsg(!m_nItems || m_pItems, "Expected items in dynarray");
+
+// Call set item for all the items
+for (index_t i = 0; i<m_nItems; i++)
+SetItem(Array.ItemPtr(i), i);
+
+return *this;
+}
+
+
+
+
 
 
 ///////////////////////////////////////
@@ -101,35 +118,35 @@ BOOL cDynArrayBase::DoResize(index_t evenSlots)
 
 void cDynArrayBase::MoveItemToIndex(index_t currentIndex, index_t newIndex)
 {
-    AssertMsg(currentIndex < m_nItems && newIndex < m_nItems, gm_pszOutOfRange);
+AssertMsg(currentIndex < m_nItems && newIndex < m_nItems, gm_pszOutOfRange);
 
-    if (currentIndex == newIndex)
-        return;
+if (currentIndex == newIndex)
+return;
 
-    // In order to move the item, we must first make a copy of it.
-    // We always keep extra space at the end of the item data block
-    // for this purpose.
-    CopyToTemporary(currentIndex);
+// In order to move the item, we must first make a copy of it.
+// We always keep extra space at the end of the item data block
+// for this purpose.
+CopyToTemporary(currentIndex);
 
-    // If the element is before target location...
-    if (currentIndex < newIndex)
-    {
-        // Shift items between current and target locations down one
-        memmove(UnsafeItemPtr( currentIndex), UnsafeItemPtr( currentIndex+1),
-                        (newIndex - currentIndex) * m_nItemSize);
+// If the element is before target location...
+if (currentIndex < newIndex)
+{
+// Shift items between current and target locations down one
+memmove(UnsafeItemPtr( currentIndex), UnsafeItemPtr( currentIndex+1),
+(newIndex - currentIndex) * m_nItemSize);
 
-    }
+}
 
-    // ...else the element is after target location...
-    {
-        // Shift items between target and current locations up one.
-        memmove(UnsafeItemPtr( newIndex+1), UnsafeItemPtr( newIndex),
-                        (currentIndex - newIndex) * m_nItemSize);
+// ...else the element is after target location...
+{
+// Shift items between target and current locations up one.
+memmove(UnsafeItemPtr( newIndex+1), UnsafeItemPtr( newIndex),
+(currentIndex - newIndex) * m_nItemSize);
 
-    }
+}
 
-    // Copy element into new position
-    CopyFromTemporary(newIndex);
+// Copy element into new position
+CopyFromTemporary(newIndex);
 }
 
 
@@ -142,27 +159,27 @@ void cDynArrayBase::MoveItemToIndex(index_t currentIndex, index_t newIndex)
 BOOL cDynArrayBase::ToStream(cOStore &) const
 {
 #if 0
-    int iElement = 0;
+int iElement = 0;
 
-    index_t numElems = Size();
+index_t numElems = Size();
 
-    if (!OStore.WriteHeader("DYNARRAY"))
-        return FALSE;
+if (!OStore.WriteHeader("DYNARRAY"))
+return FALSE;
 
-    OStore.To(numElems);
+OStore.To(numElems);
 
-    for (index_t i = 0; i < numElems; i++)
-    {
-        if (!OStore.To(i))
-            return FALSE;
+for (index_t i = 0; i < numElems; i++)
+{
+if (!OStore.To(i))
+return FALSE;
 
-        if (!ItemToStream(OStore, UnsafeItemPtr(i)))
-            return FALSE;
-    }
+if (!ItemToStream(OStore, UnsafeItemPtr(i)))
+return FALSE;
+}
 
-    return OStore.WriteTrailer();
+return OStore.WriteTrailer();
 #else
-    return FALSE;
+return FALSE;
 #endif
 }
 
@@ -174,33 +191,33 @@ BOOL cDynArrayBase::ToStream(cOStore &) const
 BOOL cDynArrayBase::FromStream(cIStore &)
 {
 #if 0
-    if (!IStore.ReadHeader("DYNARRAY"))
-        return FALSE;
+if (!IStore.ReadHeader("DYNARRAY"))
+return FALSE;
 
-    // Get the number of elements
-    index_t numElems;
-    if (!IStore.From(numElems))
-        return FALSE;
+// Get the number of elements
+index_t numElems;
+if (!IStore.From(numElems))
+return FALSE;
 
-    SetSize(numElems);
+SetSize(numElems);
 
-    for (index_t i = 0; i<numElems; i++)
-    {
-        index_t j;
-        if (!IStore.From(j))
-            return FALSE;
+for (index_t i = 0; i<numElems; i++)
+{
+index_t j;
+if (!IStore.From(j))
+return FALSE;
 
-        if (j != i)
-            return IStore.Fail();
+if (j != i)
+return IStore.Fail();
 
-        // Stream in the node over the item
-        if (!ItemFromStream(IStore, UnsafeItemPtr(i)))
-            return FALSE;
-    }
+// Stream in the node over the item
+if (!ItemFromStream(IStore, UnsafeItemPtr(i)))
+return FALSE;
+}
 
-    return IStore.ReadTrailer();
+return IStore.ReadTrailer();
 #else
-    return FALSE;
+return FALSE;
 #endif
 }
 
@@ -213,10 +230,10 @@ BOOL cDynArrayBase::FromStream(cIStore &)
 BOOL cDynArrayBase::ItemFromStream(cIStore &, tDynArrayItem *)
 {
 #if 0
-    // Copy item from stream, overwriting whatever was in the item before
-    return IStore.From((unsigned char *)pItem, GetElementSize());
+// Copy item from stream, overwriting whatever was in the item before
+return IStore.From((unsigned char *)pItem, GetElementSize());
 #else
-    return FALSE;
+return FALSE;
 #endif
 }
 
@@ -229,9 +246,9 @@ BOOL cDynArrayBase::ItemFromStream(cIStore &, tDynArrayItem *)
 BOOL cDynArrayBase::ItemToStream(cOStore &, const tDynArrayItem *) const
 {
 #if 0
-    return OStore.To((const unsigned char *)pItem, GetElementSize());
+return OStore.To((const unsigned char *)pItem, GetElementSize());
 #else
-    return FALSE;
+return FALSE;
 #endif
 }
 
@@ -246,24 +263,24 @@ BOOL cDynArrayBase::ItemToStream(cOStore &, const tDynArrayItem *) const
 void cDynArrayBase::SwapContents(cDynArrayBase &x)
 {
 
-    BYTE * p;
-    p = x.m_pItems;
-    x.m_pItems = m_pItems;
-    m_pItems = p;
+BYTE * p;
+p = x.m_pItems;
+x.m_pItems = m_pItems;
+m_pItems = p;
 
-    size_t sz;
-    sz = x.m_nItemSize;
-    x.m_nItemSize = m_nItemSize;
-    m_nItemSize = sz;
+size_t sz;
+sz = x.m_nItemSize;
+x.m_nItemSize = m_nItemSize;
+m_nItemSize = sz;
 
-    index_t  ix;
-    ix = x.m_nItems;
-    x.m_nItems = m_nItems;
-    m_nItems = ix;
+index_t  ix;
+ix = x.m_nItems;
+x.m_nItems = m_nItems;
+m_nItems = ix;
 
-    ix = x.m_nSlots;
-    x.m_nSlots = m_nSlots;
-    m_nSlots = ix;
+ix = x.m_nSlots;
+x.m_nSlots = m_nSlots;
+m_nSlots = ix;
 }
 
 
@@ -275,15 +292,15 @@ void cDynArrayBase::SwapContents(cDynArrayBase &x)
 
 index_t cDynArrayBase::BSearch(tDynArrayKey *pKey, tSearchFunc SearchFunc) const
 {
-    if (!m_pItems)
-        return BAD_INDEX;
+if (!m_pItems)
+return BAD_INDEX;
 
-    tDynArrayItem *pNewItem = bsearch(pKey, m_pItems, m_nItems, m_nItemSize, SearchFunc);
+tDynArrayItem *pNewItem = bsearch(pKey, m_pItems, m_nItems, m_nItemSize, SearchFunc);
 
-    if (!pNewItem)
-        return BAD_INDEX;
+if (!pNewItem)
+return BAD_INDEX;
 
-    return ((BYTE *)pNewItem - m_pItems) / m_nItemSize;
+return ((BYTE *)pNewItem - m_pItems) / m_nItemSize;
 }
 
 
@@ -295,32 +312,32 @@ index_t cDynArrayBase::BSearch(tDynArrayKey *pKey, tSearchFunc SearchFunc) const
 
 index_t cDynArrayBase::LSearch(tDynArrayKey *pKey, tSearchFunc SearchFunc) const
 {
-    if (!m_pItems)
-        return BAD_INDEX;
+if (!m_pItems)
+return BAD_INDEX;
 
-    BYTE * pNewItem;
-    #ifdef LSEARCH_IN_RTL
-    // @TBD: Is this part of our RTL yet?
-    pNewItem = (BYTE *) lsearch(pItem, m_pItems, m_nItems, m_nItemSize, SearchFunc);
-    #else
-    pNewItem = m_pItems;
+BYTE * pNewItem;
+#ifdef LSEARCH_IN_RTL
+// @TBD: Is this part of our RTL yet?
+pNewItem = (BYTE *) lsearch(pItem, m_pItems, m_nItems, m_nItemSize, SearchFunc);
+#else
+pNewItem = m_pItems;
 
-	index_t Remaining;
-    for (Remaining = m_nItems; Remaining; Remaining--)
-    {
-        if (SearchFunc(pKey, (tDynArrayItem *)pNewItem)==0)
-            break;
-        pNewItem += m_nItemSize;
-    }
+index_t Remaining;
+for (Remaining = m_nItems; Remaining; Remaining--)
+{
+if (SearchFunc(pKey, (tDynArrayItem *)pNewItem)==0)
+break;
+pNewItem += m_nItemSize;
+}
 
-    if (!Remaining)
-        pNewItem = 0;
-    #endif
+if (!Remaining)
+pNewItem = 0;
+#endif
 
-    if (!pNewItem)
-        return BAD_INDEX;
+if (!pNewItem)
+return BAD_INDEX;
 
-    return (pNewItem - m_pItems) / m_nItemSize;
+return (pNewItem - m_pItems) / m_nItemSize;
 }
 
 
@@ -331,11 +348,12 @@ index_t cDynArrayBase::LSearch(tDynArrayKey *pKey, tSearchFunc SearchFunc) const
 
 void cDynArrayBase::Sort(tSortFunc SortFunc)
 {
-    if (!m_pItems)
-        return;
+if (!m_pItems)
+return;
 
-    qsort(m_pItems, m_nItems, m_nItemSize, SortFunc);
+qsort(m_pItems, m_nItems, m_nItemSize, SortFunc);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 
+*/

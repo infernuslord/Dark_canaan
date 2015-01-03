@@ -148,6 +148,9 @@
     <ClInclude Include="templexp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="dynarsrv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpptools.txt">

@@ -110,6 +110,7 @@
     <ClInclude Include="dlist.h" />
     <ClInclude Include="dlisttem.h" />
     <ClInclude Include="dynarray.h" />
+    <ClInclude Include="dynarsrv.h" />
     <ClInclude Include="dynfunc.h" />
     <ClInclude Include="filekind.h" />
     <ClInclude Include="filepath.h" />

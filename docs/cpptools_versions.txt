@@ -1,0 +1,44 @@
+delmlist.h		1.1
+dlist.h			1.9
+dlisttem.h		1.3
+dynarray.h		1.20
+dynarsrv.h		1.4
+dynfunc.h		1.1
+filekind.h		1.1
+filepath.h		1.4
+filespec.h		1.3
+fixedque.h		1.6
+fixedstk.h		1.2
+fnamutil.h		1.3
+hashfunc.h		1.5
+hashpp.h		1.9
+hashset.h		1.19
+hashtok.h		-
+hshpptem.h		1.8
+hshstimp.h		1.4
+hshsttem.h		1.7
+packflag.h		1.5
+pdynarr.h		1.7
+relocptr.h		1.5
+splitpat.h		1.2
+str.h			1.5
+templexp.h		1.1
+
+delmlist.cpp	1.2
+dlist.cpp		1.4
+dynarray.cpp	1.11
+dynfunc.cpp		1.2
+filepath.cpp	1.7
+filespec.cpp	1.12
+fnamutil.cpp	1.7
+hashpp.cpp		-
+hashset.cpp		1.15
+packflag.cpp	1.1
+pdynarr.cpp		1.5
+relocptr.cpp	1.10
+splitpat.cpp	1.3
+str.cpp			1.8
+
+hashlex.c		-
+
+hashtest.cc		-
