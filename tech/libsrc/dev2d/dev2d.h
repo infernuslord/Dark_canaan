@@ -373,7 +373,7 @@ extern void gr_init_sub_canvas (grs_canvas *sc, grs_canvas *dc,
 extern void gr_close_canvas(grs_canvas *c);
 #define gr_close_sub_canvas gr_close_canvas
 extern grs_canvas *gr_alloc_canvas (int id, int w, int h);
-extern gr_free_canvas (grs_canvas *c);
+extern int gr_free_canvas (grs_canvas *c);
 extern grs_canvas *gr_alloc_sub_canvas (grs_canvas *c, int x, int y,
                                         int w, int h);
 extern void gr_free_sub_canvas (grs_canvas *c);
