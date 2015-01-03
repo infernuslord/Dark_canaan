@@ -6,5 +6,6 @@
 //
 
 #ifdef _WIN32
+#include <lg.h>
 #include <findfile.h>
 #endif

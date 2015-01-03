@@ -47,7 +47,7 @@
 
 inline BOOL FileExists(const char * pszFile)
     {
-    return (access(pszFile, 0) == 0);
+    return (_access(pszFile, 0) == 0);
     }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -164,7 +164,7 @@ void LGAPI LogSetOptions(int fOptions)
 void LGAPI LogSetLogFile(const char * pszFile)
     {
     // If there is now change....
-    if (pszFile && stricmp(g_Log.szName, pszFile) == 0)
+    if (pszFile && _stricmp(g_Log.szName, pszFile) == 0)
         return;
 
     // Close the old log file as needed
@@ -173,13 +173,13 @@ void LGAPI LogSetLogFile(const char * pszFile)
 
     g_Log.szName[0] = 0;
 
-    if (pszFile && stricmp("con:", pszFile) == 0)
+    if (pszFile && _stricmp("con:", pszFile) == 0)
         g_Log.fFlags |= kLogToMono;
     else if (pszFile)
         {
         g_Log.fFlags |= kLogToFile;
         g_Log.SetName(pszFile);
-        unlink(g_Log.szName);
+        _unlink(g_Log.szName);
         }
     else
         g_Log.fFlags &= ~kLogToFile;
@@ -867,8 +867,8 @@ cTraceMsgLevel::cTraceMsgLevel(const char *pszFN, long l, const char *pszMsg)
     {
     if (lLine != -1)
         {
-        pszFileName = strdup(pszFN);
-        pszMessage = strdup(pszMsg);
+        pszFileName = _strdup(pszFN);
+        pszMessage = _strdup(pszMsg);
 
         // If there is a tag...
         const char * pszTag = (pszMessage && *pszMessage) ? _LogFmt("%s {", pszMessage) : "{";

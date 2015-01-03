@@ -19,7 +19,7 @@
 #ifndef _DBGPP_H
 #define _DBGPP_H
 
-#include <iostream.h>
+//#include <iostream.h>
 #include <strstrea.h>
 extern "C" {
 #include <dbg.h>

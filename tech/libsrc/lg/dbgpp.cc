@@ -9,7 +9,8 @@
 // 
 
 
-#include <iostream.h>
+//#include <iostream.h>
+#include <cstdio>
 
 #include <dbgpp.h>
 #include <mout.h>

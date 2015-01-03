@@ -5,6 +5,7 @@
 // $Revision: 1.1 $
 //
 
+#include <lg.h>
 #include <crc32.h>
 
 static ulong g_Crc32Table[256];

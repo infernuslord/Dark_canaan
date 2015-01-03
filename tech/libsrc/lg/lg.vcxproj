@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{08A060FE-2193-4616-9415-8788954D5398}</ProjectGuid>
+    <RootNamespace>lg</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)_LibTech\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)_ObjTech\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;WINVER=0x0602;_WIN32_WINNT=0x0602;_MSC_VER=0x1600;_MFC_VER=0x0A00;_CRT_SECURE_NO_WARNINGS;_LIB;NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WIN32;_WINDOWS;WINVER=0x0602;_WIN32_WINNT=0x0602;_MSC_VER=0x1600;_MFC_VER=0x0A00;_CRT_SECURE_NO_WARNINGS;_LIB;NDEBUG;NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)tech\libsrc\lg;$(SolutionDir)tech\libsrc\dstruct;$(SolutionDir)tech\h;$(SolutionDir)tech\libsrc\lgalloc;$(SolutionDir)tech\libsrc\mprintf;$(SolutionDir)tech\libsrc\comtools;$(SolutionDir)tech\libsrc\compapis;$(SolutionDir)tech\libsrc\fix;$(SolutionDir)tech\winsrc\input</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="appagg.cpp" />
+    <ClCompile Include="breakkey.cpp" />
+    <ClCompile Include="bugtrak.c" />
+    <ClCompile Include="codewrit.cpp" />
+    <ClCompile Include="coremutx.cpp" />
+    <ClCompile Include="crc32.cpp" />
+    <ClCompile Include="datapath.cpp" />
+    <ClCompile Include="dbg.c" />
+    <ClCompile Include="dbgcfg.c" />
+    <ClCompile Include="dbgpp.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="dpathdir.c" />
+    <ClCompile Include="dptest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="exit.c" />
+    <ClCompile Include="findfile.cpp" />
+    <ClCompile Include="hashfns.cpp" />
+    <ClCompile Include="lgassert.cpp" />
+    <ClCompile Include="lglog.cpp" />
+    <ClCompile Include="lgprntf.c" />
+    <ClCompile Include="lgsprntf.c" />
+    <ClCompile Include="memgrow.c" />
+    <ClCompile Include="memreq.cpp" />
+    <ClCompile Include="memstat.c" />
+    <ClCompile Include="oheapwal.c" />
+    <ClCompile Include="stack.c" />
+    <ClCompile Include="stktrace.cpp" />
+    <ClCompile Include="thrdtool.cpp" />
+    <ClCompile Include="timings.cpp" />
+    <ClCompile Include="tmpalloc.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="breakkey.h" />
+    <ClInclude Include="bugtrak.h" />
+    <ClInclude Include="codewrit.h" />
+    <ClInclude Include="coremutx.h" />
+    <ClInclude Include="crc32.h" />
+    <ClInclude Include="datapath.h" />
+    <ClInclude Include="dbg.h" />
+    <ClInclude Include="dbgpp.h" />
+    <ClInclude Include="findfile.h" />
+    <ClInclude Include="hashfns.h" />
+    <ClInclude Include="lg.h" />
+    <ClInclude Include="lgalt.h" />
+    <ClInclude Include="lgassert.h" />
+    <ClInclude Include="lglocmsg.h" />
+    <ClInclude Include="lglog.h" />
+    <ClInclude Include="lgprntf.h" />
+    <ClInclude Include="lgsprntf.h" />
+    <ClInclude Include="memreq.h" />
+    <ClInclude Include="memstat.h" />
+    <ClInclude Include="stktrace.h" />
+    <ClInclude Include="thrdtool.h" />
+    <ClInclude Include="timings.h" />
+    <ClInclude Include="tmpalloc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbg.inc" />
+    <None Include="dbgmacro.inc" />
+    <None Include="lg.inc" />
+    <None Include="Makefile" />
+    <None Include="memmacro.inc" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="oheapwal.asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </MASM>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

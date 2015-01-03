@@ -283,7 +283,7 @@ string_copy:
 #endif
                {
                   arg_double=va_arg(arglist,double);
-						gcvt(arg_double,8,buf+dest_ind);
+						_gcvt(arg_double,8,buf+dest_ind);
                }
                newchars=strlen(buf+dest_ind);
                break;

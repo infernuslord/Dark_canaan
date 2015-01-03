@@ -450,7 +450,7 @@ static ulong spewSrc;
 
 static void (*dbg_f_report_user)(int errType, char *msg) = NULL;
 
-int (*f_getch)() = getch;
+int (*f_getch)() = _getch;
 
 int errErrCode;
 

@@ -4,6 +4,7 @@
 //
 //
 
+#include <lg.h>
 #include <stdio.h>
 #include <timings.h>
 

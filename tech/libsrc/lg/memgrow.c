@@ -8,6 +8,7 @@
  * $Date: 1993/09/30 18:37:11 $
 */
 
+#include <types.h>
 #include <stdio.h>
 #include <string.h>
 #include <malloc.h>
