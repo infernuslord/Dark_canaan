@@ -215,7 +215,7 @@ BOOL cFilePath::CreatePath() const
     AssertMsg(pName[nLenFull-1] == '\\' || pName[nLenFull-1] == '/', "Bad file path detected");
     pName[nLenFull - 1] = '\0';  // get rid of '\\'
 
-    int result = mkdir(pName);
+    int result = _mkdir(pName);
 
     free(pName);
 
@@ -284,7 +284,7 @@ BOOL cFilePath::SetCurrentPath() const
             return FALSE;
     }
 
-    if (chdir(dir) != 0)
+    if (_chdir(dir) != 0)
         return FALSE;
 
     return TRUE;

@@ -276,7 +276,7 @@ BOOL __stdcall AddFileSpec(const char * pszPath, const char * pszFileSpec, char 
     {
     if (IsFullPath(pszFileSpec))
         {
-        *ppszOut = strdup(pszFileSpec);
+        *ppszOut = _strdup(pszFileSpec);
         return ReduceDots(*ppszOut);
         }
 
@@ -287,7 +287,7 @@ BOOL __stdcall AddFileSpec(const char * pszPath, const char * pszFileSpec, char 
     // If both strings empty...
     if (!nNewLen)
         {
-        *ppszOut = strdup("");
+        *ppszOut = _strdup("");
         return FALSE;
         }
 
@@ -333,7 +333,7 @@ BOOL __stdcall ReduceDots(char *psz)
     const char cFirstChar = *psz;
     if (cFirstChar)
         {
-        const cSecondChar = *(psz+1);
+        const char cSecondChar = *(psz+1);
         // Set back stop to slash after drive...
         if (cSecondChar == ':')
             {
@@ -687,9 +687,9 @@ char *GetCondensePathStr(const char *pszOrigPath,
         }
 
     if (CaseChange == kFileToLower)
-        strlwr(pszCondensedPath);
+        _strlwr(pszCondensedPath);
     else if (CaseChange == kFileToUpper)
-        strupr(pszCondensedPath);
+        _strupr(pszCondensedPath);
 
     return pszCondensedPath;
     }

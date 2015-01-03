@@ -89,7 +89,7 @@ cFileSpec::cFileSpec(const cFileSpec &fs)
 {
     DebugMsgEx2(CONSTRUCT, "%p->cFileSpec::cFileSpec(%s)", this, fs.GetName());
     if (Kind != kSpecKindUnknown)
-        pName = strdup(fs.GetName());
+        pName = _strdup(fs.GetName());
 }
 
 
@@ -102,7 +102,7 @@ cFileSpec::cFileSpec(const sFileDesc &fs)
     DebugMsgEx2(CONSTRUCT, "%p->cFileSpec::cFileSpec(%s)", this, fs.GetName());
 
     if (Kind != kSpecKindUnknown)
-        pName = strdup(fs.GetName());
+        pName = _strdup(fs.GetName());
 }
 
 
@@ -179,7 +179,7 @@ cFileSpec &cFileSpec::operator=(const sFileDesc &fs)
         if (Kind == kSpecKindUnknown)
             pName = 0;
         else
-            pName = strdup(fs.GetName());
+            pName = _strdup(fs.GetName());
     }
 
     return *this;
@@ -647,7 +647,7 @@ void cFileSpec::SetSpecialName(const char *psz)
     Kind = kSpecKindSpecial;
 
     free(pName);
-    pName = strdup(psz);
+    pName = _strdup(psz);
 }
 
 
@@ -678,7 +678,7 @@ int cFileSpec::Compare(const sFileDesc &FileSpec) const
             return IsEmpty() ? 0 : strcmp(GetName(), FileSpec.GetName());
         else
     #endif
-            return IsEmpty() ? 0 : stricmp(GetName(), FileSpec.GetName());
+            return IsEmpty() ? 0 : _stricmp(GetName(), FileSpec.GetName());
     }
 }
 
@@ -814,7 +814,7 @@ void cFileSpec::GetNameString(cStr &Name, eFileSpecNameStringStyle Style) const
                             {
                                 char c = *p;
                                 *p = 0;
-                                strlwr(pStartComponent);
+                                _strlwr(pStartComponent);
                                 *p = c;
                             }
                             if (!*p)
@@ -1005,7 +1005,7 @@ static BOOL __stdcall PatternMatch(const char *pString, const char *pPattern)
             case '[':
             {
                 int k = 0;
-                register cc;
+                register char cc;
 
                 while ((cc = *++pPattern) != 0)
                 {

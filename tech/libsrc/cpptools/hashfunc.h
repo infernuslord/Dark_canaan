@@ -175,7 +175,7 @@ public:
 
    static unsigned IsEqual(const char* s1, const char* s2)
    {
-      return stricmp(s1,s2) == 0;
+      return _stricmp(s1,s2) == 0;
    }
 };
 

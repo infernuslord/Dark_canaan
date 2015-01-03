@@ -9,6 +9,21 @@
 
 #define DEFAULT_SIZE 10
 
+
+////////////////////////////////////////////////////////////
+// HELPER FUNCTION CLASS
+//
+
+class cHashHelperFunctions
+{
+protected:
+	static int hashlog2(int x);
+	static int expmod(int b, int e, uint m);
+	static bool is_fermat_prime(uint n, uint numtests);
+	static bool is_prime(uint n);
+};
+
+
 ////////////////////////////////////////////////////////////
 // DENSE HASH TABLE CLASS
 //
@@ -17,7 +32,7 @@
 // If you have larger things you want to hash, use cHashSet. 
 //
 
-class cHashHelperFunctions;
+
 template <class KEY, class VALUE, class FUNC> class cHashIter;
 
 template <class KEY, class VALUE, class FUNC /* == cHashTableFunctions<KEY> */> 
@@ -175,19 +190,6 @@ public:
    }
 };
 
-
-////////////////////////////////////////////////////////////
-// HELPER FUNCTION CLASS
-//
-
-class cHashHelperFunctions
-{
-protected:
-   static int hashlog2(int x);
-   static int expmod(int b, int e, uint m);
-   static bool is_fermat_prime(uint n, uint numtests);
-   static bool is_prime(uint n);
-};
 
 ////////////////////////////////////////////////////////////
 // DENSE HASH TABLE CLASS for strings 

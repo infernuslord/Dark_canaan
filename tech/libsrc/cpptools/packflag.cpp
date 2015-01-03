@@ -4,6 +4,7 @@
 //
 //
 
+#include <lg.h>
 #include <packflag.h>
 
 DWORD cPackedBoolSet::gm_fMasks[32] =

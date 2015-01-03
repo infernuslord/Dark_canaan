@@ -454,7 +454,7 @@ inline int cAnsiStr::Compare(const char* psz) const
 
 inline int cAnsiStr::CompareNoCase(const char* psz) const
     {
-    return stricmp(m_pchData, psz);
+    return _stricmp(m_pchData, psz);
     }
 
 inline int cAnsiStr::Collate(const char* psz) const
@@ -464,17 +464,17 @@ inline int cAnsiStr::Collate(const char* psz) const
 
 inline void cAnsiStr::MakeUpper()
     {
-    strupr(m_pchData);
+    _strupr(m_pchData);
     }
 
 inline void cAnsiStr::MakeLower()
     {
-    strlwr(m_pchData);
+    _strlwr(m_pchData);
     }
 
 inline void cAnsiStr::MakeReverse()
     {
-    strrev(m_pchData);
+    _strrev(m_pchData);
     }
 
 inline char* cAnsiStr::GetBuffer(int nMinBufLength)
