@@ -41,6 +41,23 @@ $(SolutionDir)tech\libsrc\dev2d
 $(SolutionDir)tech\libsrc\lg
 $(SolutionDir)tech\libsrc\lgalloc
 
+compapis
+$(SolutionDir)tech\libsrc\compapis
+$(SolutionDir)tech\libsrc\lg
+$(SolutionDir)tech\h
+$(SolutionDir)tech\libsrc\lgalloc
+$(SolutionDir)tech\libsrc\comtools
+$(SolutionDir)tech\libsrc\gameshel
+$(SolutionDir)tech\libsrc\dispdev
+
+
+
+
+
+
+
+
+
 others
 $(SolutionDir)tech\libsrc\h
 $(SolutionDir)tech\libsrc\lg

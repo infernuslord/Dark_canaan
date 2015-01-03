@@ -1,8 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 // $Source: x:/prj/tech/libsrc/compapis/RCS/arqapi.h $
-// $Author: TOML $
-// $Date: 1997/09/18 13:04:50 $
-// $Revision: 1.12 $
+// $Author: KEVIN $
+// $Date: 1999/07/06 09:52:40 $
+// $Revision: 1.13 $
 //
 
 #ifndef __ARQAPI_H
@@ -388,6 +388,11 @@ DECLARE_INTERFACE_(IAsyncReadControl, IUnknown)
     // Get the result
     //
     STDMETHOD (GetResult)(THIS_ sARQResult *) PURE;
+
+    //
+    // Check whether we are done. Quick, but no lock, so perlous
+    //
+    STDMETHOD_(BOOL, IsFinished)(THIS) PURE;
 
 };
 

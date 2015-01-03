@@ -1,7 +1,7 @@
 // $Source: x:/prj/tech/libsrc/darkloop/RCS/loopapi.h $
-// $Author: TOML $
-// $Date: 1998/06/02 10:19:07 $
-// $Revision: 1.20 $
+// $Author: CCAROLLO $
+// $Date: 1998/10/05 08:33:09 $
+// $Revision: 1.21 $
 //
 
 #ifndef __LOOPAPI_H
@@ -234,6 +234,9 @@ DECLARE_INTERFACE_(ILoopDispatch, IUnknown)
    // Set messages and optional client to use the profileable dispatcher
    STDMETHOD_(void, SetProfile)(THIS_ tLoopMessageSet messages, tLoopClientID *) PURE;
    STDMETHOD_(void, GetProfile)(THIS_ tLoopMessageSet * pMessages, tLoopClientID **) PURE;
+
+   STDMETHOD_(void, ClearTimers)(void) PURE;
+   STDMETHOD_(void, DumpTimerInfo)(void) PURE;
 #endif
 };
 
