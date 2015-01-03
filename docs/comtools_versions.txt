@@ -1,0 +1,19 @@
+aggmemb.h		1.12
+comconn.h		1.2
+comtools.h		1.55
+constrid.h		1.1
+genagg.h		1.11
+geniset.h		1.10
+interset.h		1.7
+objcguid.h		1.1
+objcoll.h		1.20
+pguidset.h		1.5
+pintarr.h		1.3
+
+comconn.cpp		1.2
+comtools.cpp	1.3
+genagg.cpp		1.24
+geniset.cpp		1.14
+interset.cpp	1.10
+pguidset.cpp	1.8
+pintarr.cpp		1.6
