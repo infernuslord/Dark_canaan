@@ -87,6 +87,9 @@
     <ClCompile Include="atofix.c" />
     <ClCompile Include="fix.c" />
     <ClCompile Include="fix24.c" />
+    <ClCompile Include="fixdiv.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="fixsprnt.c" />
     <ClCompile Include="fix_asm.c" />
     <ClCompile Include="fix_pow.c" />

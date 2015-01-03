@@ -53,6 +53,9 @@
     <ClCompile Include="fix_asm.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="fixdiv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="altfix.h">
