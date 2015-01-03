@@ -88,6 +88,13 @@ $(SolutionDir)tech\libsrc\mprintf
 $(SolutionDir)tech\libsrc\dstruct
 $(SolutionDir)3rdParty\dx70\include
 
+matrix
+$(SolutionDir)tech\libsrc\matrix
+$(SolutionDir)tech\h
+$(SolutionDir)tech\libsrc\lg
+
+
+
 
 others
 $(SolutionDir)tech\libsrc\h

@@ -1,0 +1,29 @@
+dmat.c			1.1
+matang.c		1.16
+matangd.c		1.16
+matmat.c		1.7
+matmatd.c		1.7
+matvec.c		1.3
+matvecd.c		1.3	
+trans.c			1.6
+transd.c		1.6		
+vec2.c			1.2
+vec2d.c			1.2
+vecang.c		1.4
+vecangd.c		1.4
+vecvec.c		1.8
+vecvecd.c		1.8
+
+dmat.h			1.2
+dmats.h			1.1
+matrix.h		1.26
+matrixd.h		1.26
+matrixds.h		1.10
+matrixs.h		1.10
+mxang.h			1.3
+mxcvrt.h		1.1
+mxsym.h			1.3
+mxsymd.h		1.3
+_test.h			1.1
+
+transasm.asm	1.1

@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gameshel", "tech\libsrc\gam
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dispdev", "tech\libsrc\dispdev\dispdev.vcxproj", "{C07C1AED-2F36-483E-A8BC-26650C8CCD67}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "matrix", "tech\libsrc\matrix\matrix.vcxproj", "{BA234836-D7C7-42A9-8355-37DFBC44C58B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -67,6 +69,10 @@ Global
 		{C07C1AED-2F36-483E-A8BC-26650C8CCD67}.Debug|Win32.Build.0 = Debug|Win32
 		{C07C1AED-2F36-483E-A8BC-26650C8CCD67}.Release|Win32.ActiveCfg = Release|Win32
 		{C07C1AED-2F36-483E-A8BC-26650C8CCD67}.Release|Win32.Build.0 = Release|Win32
+		{BA234836-D7C7-42A9-8355-37DFBC44C58B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BA234836-D7C7-42A9-8355-37DFBC44C58B}.Debug|Win32.Build.0 = Debug|Win32
+		{BA234836-D7C7-42A9-8355-37DFBC44C58B}.Release|Win32.ActiveCfg = Release|Win32
+		{BA234836-D7C7-42A9-8355-37DFBC44C58B}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
