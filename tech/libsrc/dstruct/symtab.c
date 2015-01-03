@@ -146,7 +146,7 @@ void SymInitTable(Symtab *psymtab, ushort flags, short numHashEntries)
 		}
 	else
 		{
-		psymtab->f_cmp = strcmpi;
+		psymtab->f_cmp = _strcmpi;
 		psymtab->f_hash = SymHashUpper;
 		}
 }

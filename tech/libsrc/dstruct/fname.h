@@ -1,8 +1,15 @@
 //		FNAME.H		Filename manipulation
 //		Rex E. Bradford (REX)
 /*
-* $Header: r:/prj/lib/src/dstruct/rcs/fname.h 1.1 1993/05/03 10:53:34 rex Exp $
+* $Header: x:/prj/tech/libsrc/dstruct/RCS/fname.h 1.3 1999/09/14 11:24:11 JAEMZ Exp $
 * $Log: fname.h $
+ * Revision 1.3  1999/09/14  11:24:11  JAEMZ
+ * Constified this puppy!
+ * 
+ * Revision 1.2  1996/01/22  15:38:38  DAVET
+ * 
+ * Added cplusplus stuff.
+ * 
  * Revision 1.1  1993/05/03  10:53:34  rex
  * Initial revision
  * 
@@ -12,6 +19,10 @@
 #define FNAME_H
 
 #include "types.h"
+
+#ifdef __cplusplus
+extern "C"  {
+#endif
 
 #define MAXLEN_FNAME_PATH 113
 #define MAXLEN_FNAME_NAME 8
@@ -26,7 +37,7 @@ typedef struct {		// this struct holds 4 pieces of a filename
 
 //	This function extracts a filename struct from a string
 
-int FnameExtract(Fname *fname, char *str);
+int FnameExtract(Fname *fname, const char *str);
 
 //	This function builds a string from a filename struct
 
@@ -54,6 +65,13 @@ void FnameReplacePart(char *part, char *str, int maxlen);
 #define FnameDelPath(fn) ((fn)->path[0]=0)
 #define FnameDelName(fn) ((fn)->name[0]=0)
 #define FnameDelExt(fn) ((fn)->ext[0]=0)
+
+
+#ifdef __cplusplus
+}
+#endif
+
+
 
 #endif
 

@@ -50,12 +50,13 @@ $(SolutionDir)tech\libsrc\comtools
 $(SolutionDir)tech\libsrc\gameshel
 $(SolutionDir)tech\libsrc\dispdev
 
-
-
-
-
-
-
+dstruct
+$(SolutionDir)tech\libsrc\dstruct
+$(SolutionDir)tech\libsrc\lg
+$(SolutionDir)tech\h
+$(SolutionDir)tech\libsrc\lgalloc
+$(SolutionDir)tech\libsrc\mprintf
+$(SolutionDir)tech\libsrc\fix
 
 
 others

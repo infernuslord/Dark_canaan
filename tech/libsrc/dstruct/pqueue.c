@@ -170,12 +170,12 @@ errtype pqueue_least(PQueue* q, void* elem)
 errtype pqueue_write(PQueue* q, int fd, void (*writefunc)(int fd, void* elem))
 {
    int i;
-   write(fd,(char*)q,sizeof(PQueue));
+   _write(fd,(char*)q,sizeof(PQueue));
    for(i = 0; i < q->fullness; i++)
    {
       if (writefunc != NULL)
          writefunc(fd,NTH(q,i));
-      else write(fd,(char*)NTH(q,i),q->elemsize);
+      else _write(fd,(char*)NTH(q,i),q->elemsize);
    }
    return OK;
 }
@@ -183,7 +183,7 @@ errtype pqueue_write(PQueue* q, int fd, void (*writefunc)(int fd, void* elem))
 errtype pqueue_read(PQueue* q, int fd, void (*readfunc)(int fd, void* elem))
 {
    int i;
-   read(fd,(char*)q,sizeof(PQueue));
+   _read(fd,(char*)q,sizeof(PQueue));
    if (q->grow) q->size = q->fullness;
    q->vec = Malloc(q->size*q->elemsize);
    if (q->vec == NULL) return ERR_NOMEM;
@@ -191,7 +191,7 @@ errtype pqueue_read(PQueue* q, int fd, void (*readfunc)(int fd, void* elem))
    {
       if (readfunc != NULL)
          readfunc(fd,NTH(q,i));
-      else read(fd,(char*)NTH(q,i),q->elemsize);
+      else _read(fd,(char*)NTH(q,i),q->elemsize);
    }
    return OK;
 }
