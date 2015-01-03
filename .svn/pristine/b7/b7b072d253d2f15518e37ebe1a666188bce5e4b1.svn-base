@@ -1,5 +1,0 @@
-
-DEFINE_LG_GUID(IID_ITagFile, 0x38);
-DEFINE_LG_GUID(IID_ITagFileIter, 0xC0);
-
-
