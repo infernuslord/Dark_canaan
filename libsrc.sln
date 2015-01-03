@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lg", "tech\libsrc\lg\lg.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fix", "tech\libsrc\fix\fix.vcxproj", "{F3225CB3-2A39-4CA1-9C06-61B74E149BC3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "compapis", "tech\libsrc\compapis\compapis.vcxproj", "{D5F47CE8-6AD4-47E8-9BEA-DC26D4E579AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -43,6 +45,10 @@ Global
 		{F3225CB3-2A39-4CA1-9C06-61B74E149BC3}.Debug|Win32.Build.0 = Debug|Win32
 		{F3225CB3-2A39-4CA1-9C06-61B74E149BC3}.Release|Win32.ActiveCfg = Release|Win32
 		{F3225CB3-2A39-4CA1-9C06-61B74E149BC3}.Release|Win32.Build.0 = Release|Win32
+		{D5F47CE8-6AD4-47E8-9BEA-DC26D4E579AC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D5F47CE8-6AD4-47E8-9BEA-DC26D4E579AC}.Debug|Win32.Build.0 = Debug|Win32
+		{D5F47CE8-6AD4-47E8-9BEA-DC26D4E579AC}.Release|Win32.ActiveCfg = Release|Win32
+		{D5F47CE8-6AD4-47E8-9BEA-DC26D4E579AC}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
