@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FF01C01C-26B5-40A5-AA15-B89205DDD98D}</ProjectGuid>
+    <RootNamespace>cpptools</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)_LibTech\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)_ObjTech\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;WINVER=0x0602;_WIN32_WINNT=0x0602;_MSC_VER=0x1600;_MFC_VER=0x0A00;_CRT_SECURE_NO_WARNINGS;_LIB;NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WIN32;_WINDOWS;WINVER=0x0602;_WIN32_WINNT=0x0602;_MSC_VER=0x1600;_MFC_VER=0x0A00;_CRT_SECURE_NO_WARNINGS;_LIB;NDEBUG;NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)tech\libsrc\cpptools;$(SolutionDir)tech\h;$(SolutionDir)tech\libsrc\lg;$(SolutionDir)tech\libsrc\lgalloc;$(SolutionDir)tech\libsrc\mprintf</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="delmlist.cpp" />
+    <ClCompile Include="dlist.cpp" />
+    <ClCompile Include="dynarray.cpp" />
+    <ClCompile Include="dynfunc.cpp" />
+    <ClCompile Include="filepath.cpp" />
+    <ClCompile Include="filespec.cpp" />
+    <ClCompile Include="fnamutil.cpp" />
+    <ClCompile Include="hashlex.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="hashpp.cpp" />
+    <ClCompile Include="hashset.cpp" />
+    <ClCompile Include="hashtest.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="packflag.cpp" />
+    <ClCompile Include="pdynarr.cpp" />
+    <ClCompile Include="relocptr.cpp" />
+    <ClCompile Include="splitpat.cpp" />
+    <ClCompile Include="str.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="delmlist.h" />
+    <ClInclude Include="dlist.h" />
+    <ClInclude Include="dlisttem.h" />
+    <ClInclude Include="dynarray.h" />
+    <ClInclude Include="dynfunc.h" />
+    <ClInclude Include="filekind.h" />
+    <ClInclude Include="filepath.h" />
+    <ClInclude Include="filespec.h" />
+    <ClInclude Include="fixedque.h" />
+    <ClInclude Include="fixedstk.h" />
+    <ClInclude Include="fnamutil.h" />
+    <ClInclude Include="hashfunc.h" />
+    <ClInclude Include="hashpp.h" />
+    <ClInclude Include="hashset.h" />
+    <ClInclude Include="hashtok.h" />
+    <ClInclude Include="hshpptem.h" />
+    <ClInclude Include="hshstimp.h" />
+    <ClInclude Include="hshsttem.h" />
+    <ClInclude Include="packflag.h" />
+    <ClInclude Include="pdynarr.h" />
+    <ClInclude Include="relocptr.h" />
+    <ClInclude Include="splitpat.h" />
+    <ClInclude Include="str.h" />
+    <ClInclude Include="templexp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpptools.txt" />
+    <None Include="flags.mh" />
+    <None Include="hashlex.lex" />
+    <None Include="hashtest.y" />
+    <None Include="Makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
