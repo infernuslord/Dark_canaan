@@ -247,7 +247,7 @@ bool mono_detect(void)
    // something else.  Under Windows NT, monochrome output is not supported.
 
    if (pStr = getenv ("OS"))
-      if (! stricmp (pStr, "Windows_NT"))
+      if (! _stricmp (pStr, "Windows_NT"))
          return FALSE;
 
    // Must be Windows 95
@@ -344,7 +344,7 @@ int mono_logon (char *fn, int how, int which)
 		open_flags|=O_APPEND;
 	if (fn!=last_lf)
 		strcpy(last_lf,fn);
-   mono_file = open (fn, open_flags, S_IWRITE);
+   mono_file = _open (fn, open_flags, S_IWRITE);
    mlog=which;
    return mono_file;
 }
@@ -354,7 +354,7 @@ void mono_logoff (void)
 {
 	if (mono_file!=-1)
 	{
-	   close (mono_file);
+	   _close (mono_file);
    	mono_file = -1;
 	}
 }
@@ -373,7 +373,7 @@ bool mono_logdel (bool kill_last, bool always)
 			return FALSE;
 		else
 		{
-			close(mono_file);
+			_close(mono_file);
 			mono_file=-1;
 		}
 	}
@@ -747,7 +747,7 @@ int _mprint(const char *s, int n)
    uchar *p;                           /* pointer to current line. */
 
    if (_mono_log())
-      write (mono_file, s, n);			/* write even if no screen */
+      _write (mono_file, s, n);			/* write even if no screen */
 #ifdef _WIN32
    if (mono_to_debugger)
       OutputDebugString (s);
@@ -857,15 +857,15 @@ bool mono_dump(char *fn, bool erase_it, bool readable)
 	if (!_mono_top()) return FALSE;
 	if (erase_it) open_flags|=O_TRUNC; else open_flags|=O_APPEND;
 	if (fn==NULL) fn=MONO_DUMP;
-   if ((mono_hnd = open (fn, open_flags, S_IWRITE))==-1) return FALSE;
+   if ((mono_hnd = _open (fn, open_flags, S_IWRITE))==-1) return FALSE;
    if (readable) { on_line[MONO_WID]=0x0D; on_line[MONO_WID+1]=0x0A; write_wid+=2; }
 	for (y=0; y<MONO_HGT; y++)
 	{
 		cur_char=(uchar *)page_addr+MONO_ROW*y;
 		for (x=0; x<MONO_WID; x++)
 			on_line[x]=*(cur_char+2*x);
-		write(mono_hnd,on_line,write_wid);
+		_write(mono_hnd,on_line,write_wid);
 	}
-	close(mono_hnd);
+	_close(mono_hnd);
 	return TRUE;
 }

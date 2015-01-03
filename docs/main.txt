@@ -1,10 +1,14 @@
 cpptools
 $(SolutionDir)tech\libsrc\cpptools;
-(SolutionDir)tech\h;
-(SolutionDir)tech\libsrc\lg;
-(SolutionDir)tech\libsrc\lgalloc;
-(SolutionDir)tech\libsrc\mprintf
+$(SolutionDir)tech\h;
+$(SolutionDir)tech\libsrc\lg;
+$(SolutionDir)tech\libsrc\lgalloc;
+$(SolutionDir)tech\libsrc\mprintf
 
+mprintf
+$(SolutionDir)tech\libsrc\mprintf
+$(SolutionDir)tech\h
+$(SolutionDir)tech\libsrc\lg
 
 others
 $(SolutionDir)tech\libsrc\h

@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cpptools", "tech\libsrc\cpptools\cpptools.vcxproj", "{FF01C01C-26B5-40A5-AA15-B89205DDD98D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mprintf", "tech\libsrc\mprintf\mprintf.vcxproj", "{27B0454C-1FFD-47B4-9105-FFA67DD55854}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -13,6 +15,10 @@ Global
 		{FF01C01C-26B5-40A5-AA15-B89205DDD98D}.Debug|Win32.Build.0 = Debug|Win32
 		{FF01C01C-26B5-40A5-AA15-B89205DDD98D}.Release|Win32.ActiveCfg = Release|Win32
 		{FF01C01C-26B5-40A5-AA15-B89205DDD98D}.Release|Win32.Build.0 = Release|Win32
+		{27B0454C-1FFD-47B4-9105-FFA67DD55854}.Debug|Win32.ActiveCfg = Debug|Win32
+		{27B0454C-1FFD-47B4-9105-FFA67DD55854}.Debug|Win32.Build.0 = Debug|Win32
+		{27B0454C-1FFD-47B4-9105-FFA67DD55854}.Release|Win32.ActiveCfg = Release|Win32
+		{27B0454C-1FFD-47B4-9105-FFA67DD55854}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

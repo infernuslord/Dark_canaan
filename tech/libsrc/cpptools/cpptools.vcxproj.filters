@@ -168,5 +168,6 @@
     <None Include="Makefile">
       <Filter>Docs</Filter>
     </None>
+    <None Include="cpptools.vcxproj" />
   </ItemGroup>
 </Project>

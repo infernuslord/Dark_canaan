@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="cpptools.txt" />
+    <None Include="cpptools.vcxproj" />
     <None Include="flags.mh" />
     <None Include="hashlex.lex" />
     <None Include="hashtest.y" />
