@@ -16,6 +16,7 @@
 
 #define LG_HOME
 
+#include <windows.h>
 #include <types.h>
 #include <lglog.h>
 #include <lglocmsg.h>
