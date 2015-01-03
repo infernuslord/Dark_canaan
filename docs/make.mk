@@ -1,0 +1,10 @@
+export
+
+ALL $(MAKECMDGOALS): $(LIBTARGS) #$(APPTARGS)
+
+$(LIBTARGS):
+	@$(MAKE) -f $(MAKETOP)/makelib.mk TARGET=$@ $(MAKECMDGOALS)
+
+$(APPTARGS):
+	@$(MAKE) -f $(MAKETOP)/makeapp.mk TARGET=$@ $(MAKECMDGOALS)
+
