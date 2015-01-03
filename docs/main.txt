@@ -1,3 +1,7 @@
+Notes: 2 files names dispbase.h
+
+
+
 cpptools
 $(SolutionDir)tech\libsrc\cpptools
 $(SolutionDir)tech\h
@@ -68,6 +72,22 @@ $(SolutionDir)tech\libsrc\compapis
 $(SolutionDir)tech\libsrc\dispdev
 $(SolutionDir)tech\libsrc\cpptools
 $(SolutionDir)tech\winsrc\input
+
+dispdev
+$(SolutionDir)tech\libsrc\dispdev
+$(SolutionDir)tech\libsrc\lg
+$(SolutionDir)tech\h
+$(SolutionDir)tech\libsrc\lgalloc
+$(SolutionDir)tech\libsrc\comtools
+$(SolutionDir)tech\libsrc\cpptools
+$(SolutionDir)tech\libsrc\compapis
+$(SolutionDir)tech\libsrc\dev2d
+$(SolutionDir)tech\libsrc\fix
+$(SolutionDir)tech\libsrc\matrix
+$(SolutionDir)tech\libsrc\mprintf
+$(SolutionDir)tech\libsrc\dstruct
+$(SolutionDir)3rdParty\dx70\include
+
 
 others
 $(SolutionDir)tech\libsrc\h

@@ -4,6 +4,7 @@
 // This file isolates the display device from dependence on gshelapi.h
 //
 
+#include <lg.h>
 #include <comtools.h>
 #include <gshelapi.h>
 #include <appagg.h>

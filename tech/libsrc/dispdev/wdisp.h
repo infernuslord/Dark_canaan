@@ -180,6 +180,12 @@ public:
     // Query kind, flags, and ddraw guid
     STDMETHOD_(void, GetKind2)(eDisplayDeviceKind *, int *, GUID **);
 
+    //Set Gamma
+    STDMETHOD_(BOOL, SetGamma)(double gamma);
+
+    // Set page flipping
+    STDMETHOD_(BOOL, SetFlip)(BOOL bFlip);
+
     // Create a GDI bitmap
     HBITMAP CreateGDIBitmap(sGdiBitmapInfo * pBitmapInfo);
 
@@ -233,8 +239,7 @@ private:
     class cIWinDisplayDeviceProxy : public IWinDisplayDevice
     {
     public:
-        cIWinDisplayDeviceProxy(cWinDisplayDevice * pOuter, IUnknown * pOuterUnknown)
-          : m_pOuter(pOuter), m_pTaskSwitchCallback(NULL)
+        cIWinDisplayDeviceProxy(cWinDisplayDevice * pOuter, IUnknown * pOuterUnknown) : m_pOuter(pOuter), m_pTaskSwitchCallback(NULL)
         {
             INIT_DELEGATION(pOuterUnknown);
         }
@@ -245,11 +250,13 @@ private:
         STDMETHOD_(BOOL, ProcessMessage)(UINT msg, WPARAM wParam, LPARAM lParam, long * pRetVal);
         STDMETHOD_(void, GetWidthHeight)(unsigned * pWidth, unsigned * pHeight);
         STDMETHOD_(void, OnTaskSwitch)  (BOOL);
-        STDMETHOD_(BOOL, GetDirectDraw) (IDirectDraw **);
+        //XXXX wdispapi update
+        STDMETHOD_(BOOL, GetDirectDraw)(IDirectDraw **);
         STDMETHOD_(void, WaitForMutex)();
         STDMETHOD_(void, ReleaseMutex)();
         STDMETHOD_(void, CursorBltFromGDIScreen)(sGrBitmap *, int x, int y);
         STDMETHOD_(void, CursorBltToGDIScreen)(sGrBitmap *, int x, int y);
+        //XXXX wdispapi update
         STDMETHOD_(BOOL, GetBitmapSurface)(sGrBitmap *, IDirectDrawSurface **);
         STDMETHOD_(void, AddTaskSwitchCallback)(WinDispDevCallbackFunc *callback);
         STDMETHOD_(void, RemoveTaskSwitchCallback)(int id);

@@ -12,7 +12,7 @@
 // callback chains and won't have to link this code unless it actually 
 // implements one.
 
-
+#include <lg.h>
 #include <lgassert.h>
 #include <cbchain.h>
 

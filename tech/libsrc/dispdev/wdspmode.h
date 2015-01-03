@@ -29,9 +29,7 @@
 class cWinDisplayModeOperations
 {
 public:
-    cWinDisplayModeOperations(cWinDisplayDevice * pDisplayDevice)
-      : m_pDisplayDevice(pDisplayDevice),
-        m_ScaleFactor(0)
+    cWinDisplayModeOperations(cWinDisplayDevice * pDisplayDevice) : m_pDisplayDevice(pDisplayDevice), m_ScaleFactor(0)
     {
     }
 
@@ -51,6 +49,8 @@ public:
     virtual BOOL DoUnlock() = 0;
     virtual void DoFlush();
     virtual void DoFlushRect(int x0, int y0, int x1, int y1);
+    virtual BOOL DoSetFlip(BOOL bflip);
+    virtual BOOL DoSetGamma(double gamma);
 
     const sGrModeInfoEx & GetModeInfoEx() const
     {

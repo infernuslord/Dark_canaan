@@ -38,7 +38,7 @@
 
 tResult LGAPI _DisplayDeviceCreate(REFIID, IDisplayDevice ** /* ppDisplayDevice */, IUnknown * pOuterUnknown, eDisplayDeviceKind kind, int flags)
 {
-    if (new cWinDisplayDevice(pOuterUnknown, kind, flags) != 0)
+    if (new cWinDisplayDevice(pOuterUnknown, kind, flags) != false)
         return NOERROR;
     return E_FAIL;
 }

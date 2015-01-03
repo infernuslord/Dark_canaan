@@ -253,6 +253,34 @@ STDMETHODIMP_(void) cWinDisplayDevice::GetInfo(sGrDeviceInfo * pInfo, sGrModeInf
     m_pDisplayProvider->DoGetInfo(pInfo, pModeInfo);
 }
 
+
+
+//XXX added
+STDMETHODIMP_(BOOL) cWinDisplayDevice::SetGamma(double gamma)
+{
+    int result;
+
+    if ( this->m_pDisplayModeOperations )
+        result = TRUE;
+    //result = ((int (__thiscall *)(_DWORD, _DWORD, _DWORD))this->m_pDisplayModeOperations->vfptr->DoSetGamma)(this->m_pDisplayModeOperations, LODWORD(gamma), HIDWORD(gamma));
+    else
+        result = 0;
+    return result;
+}
+
+STDMETHODIMP_(BOOL) cWinDisplayDevice::SetFlip(BOOL bFlip)
+{
+    BOOL result;
+
+    if ( this->m_pDisplayModeOperations )
+        //result = this->m_pDisplayModeOperations->vfptr->DoSetFlip(this->m_pDisplayModeOperations, bFlip);
+        result = m_pDisplayModeOperations->DoSetFlip(bFlip);
+    else
+        result = 0;
+    return result;
+}
+
+
 ///////////////////////////////////////
 //
 // Open the device

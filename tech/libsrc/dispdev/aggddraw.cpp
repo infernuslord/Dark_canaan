@@ -33,10 +33,7 @@ IMPLEMENT_SIMPLE_AGGREGATE_CONTROL_DELETE_CLIENT(cAggDirectDraw);
 
 ///////////////////////////////////////
 
-cAggDirectDraw::cAggDirectDraw(IUnknown * pOuterUnknown)
-  : m_pOuterUnknown(pOuterUnknown),
-    m_AggregateControl(this),
-    m_pDirectDraw(NULL)
+cAggDirectDraw::cAggDirectDraw(IUnknown * pOuterUnknown) : m_pOuterUnknown(pOuterUnknown), m_AggregateControl(this), m_pDirectDraw(NULL)
     {
     // Add internal components to outer aggregate...
     AddToAggregate1(pOuterUnknown,
