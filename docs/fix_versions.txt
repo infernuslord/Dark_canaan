@@ -1,0 +1,19 @@
+altfix.h	1.9
+fix.h		1.59
+safefix.h	1.1
+trigtab.h	-
+
+atofix.c	1.2
+fix.c		1.28
+fix24.c		1.1
+fixsprnt.c	1.1
+fix_asm.c	-
+fix_pow.c	1.1
+f_exp.c		1.1
+safefix.c	1.1
+trigtab.c	-
+
+fix.inc		1.19
+
+fixdiv.asm	1.3
+fix_asm.asm	1.12
