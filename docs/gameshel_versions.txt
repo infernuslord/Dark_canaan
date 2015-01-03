@@ -1,0 +1,13 @@
+dgshell.cpp		1.9
+wgscreat.cpp	1.7
+wgshell.cpp		1.55
+wgshelmt.cpp	1.18
+winput.cpp		1.19
+
+dgshell.h		1.8
+nec98.h			-
+wgshell.h		1.31
+wgshelmt.h		1.12
+winput.h		1.10
+winshapi.h		1.5
+wnshguid.h		-

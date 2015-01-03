@@ -1,5 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 // $Source: x:/prj/tech/libsrc/winshell/RCS/winshapi.h $
+// $Source: r:/prj/cam/libsrc/gameshel/RCS/winshapi.h $
 // $Author: TOML $
 // $Date: 1996/09/18 16:45:39 $
 // $Revision: 1.5 $

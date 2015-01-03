@@ -259,7 +259,7 @@ STDMETHODIMP_(void) cWinGameShell::PumpEvents(int /*fPumpFlags*/)
             SetQuitting(TRUE);
 
             AutoAppIPtr(Application);
-            if (pApplication)
+            if (pApplication != NULL)
                 pApplication->QueryQuit();
 
             // If we reach here, we didn't quit...
@@ -419,12 +419,12 @@ HRESULT cWinGameShell::Init()
 
     // Hook up for PreTranslateMessage()
     AutoConIPtr(Aggregate, this);
-    if (pAggregate)
+    if (pAggregate != NULL)
         pAggregate->BeginSelfReference();
 
     m_pWinApp->Advise(&m_WinAppAdviseSink, &m_WinAppAdviseCookie);
 
-    if (pAggregate)
+    if (pAggregate != NULL)
         pAggregate->EndSelfReference();
 
     CreateGameWindow();
@@ -466,12 +466,12 @@ HRESULT cWinGameShell::End()
     m_flags &= ~kAllowPump;
 
     AutoConIPtr(Aggregate, this);
-    if (pAggregate)
+    if (pAggregate != NULL)
         pAggregate->BeginSelfReference();
 
     m_pWinApp->Unadvise(m_WinAppAdviseCookie);
 
-    if (pAggregate)
+    if (pAggregate != NULL)
         pAggregate->EndSelfReference();
 
     return NOERROR;
@@ -866,7 +866,7 @@ long cWinGameShell::WndProc(UINT msg, WPARAM wParam, LPARAM lParam)
                 default:
                 {
                     AutoAppIPtr(Application);
-                    if (pApplication)
+                    if (pApplication != NULL)
                         pApplication->AppCommand(wParam);
                 }
             }

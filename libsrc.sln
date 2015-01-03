@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "compapis", "tech\libsrc\com
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dstruct", "tech\libsrc\dstruct\dstruct.vcxproj", "{2849B306-1D8A-48CF-A8F6-218C6FE4AA8B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gameshel", "tech\libsrc\gameshel\gameshel.vcxproj", "{2FC589FA-80BA-46DF-B06C-B21154A2EFC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -55,6 +57,10 @@ Global
 		{2849B306-1D8A-48CF-A8F6-218C6FE4AA8B}.Debug|Win32.Build.0 = Debug|Win32
 		{2849B306-1D8A-48CF-A8F6-218C6FE4AA8B}.Release|Win32.ActiveCfg = Release|Win32
 		{2849B306-1D8A-48CF-A8F6-218C6FE4AA8B}.Release|Win32.Build.0 = Release|Win32
+		{2FC589FA-80BA-46DF-B06C-B21154A2EFC4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2FC589FA-80BA-46DF-B06C-B21154A2EFC4}.Debug|Win32.Build.0 = Debug|Win32
+		{2FC589FA-80BA-46DF-B06C-B21154A2EFC4}.Release|Win32.ActiveCfg = Release|Win32
+		{2FC589FA-80BA-46DF-B06C-B21154A2EFC4}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
