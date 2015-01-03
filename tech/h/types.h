@@ -1,8 +1,8 @@
 /*
  * $Source: x:/prj/tech/hsrc/RCS/types.h $
- * $Revision: 1.27 $
+ * $Revision: 1.31 $
  * $Author: TOML $
- * $Date: 1997/12/09 20:46:54 $
+ * $Date: 1998/09/29 11:23:32 $
  *
  * extra typedefs and macros for use by all code.
  *
@@ -36,6 +36,9 @@
         #pragma warning 689 9
         #pragma warning 656 9
         #pragma warning 657 9
+        // turn off truncated values warning since it gives false
+        // positives everywhere for short = short - short;
+        #pragma warning 389 9
     #else
         // Preprocessing symbol 'X' has not been declared in Watcom C front end only
         #pragma warning 203 9
@@ -63,6 +66,8 @@
         // template-class specialization 'blah' already instantiated
         // to be honest, im not C++ boy enough to know what is up here - tom?
         #pragma warning (disable:4660)
+        // truncation from 'const double ' to 'float'
+        #pragma warning (disable:4305)
 
         // these probably dont want to be here, but rather be in
         // SHOW_SMALL_BUT_MAYBE_A_BUG_WARNINGS or something
@@ -176,6 +181,10 @@ typedef unsigned char bool;             // Warning: future C++ keyword collision
 // GLOBALLY UNIQUE IDENTIFIERS (GUIDs)
 //
 
+// Forward declare a guid
+#define F_DECLARE_GUID(guid) \
+    EXTERN_C const GUID CDECL FAR guid
+
 #if !defined(NO_GUIDS) && !defined(GUID_DEFINED)
 #define GUID_DEFINED
 
@@ -251,6 +260,12 @@ typedef struct  _GUID
                        (0x7a80 + (number)), \
                        (0x11cf + (number)), \
                        0x83, 0x48, 0x00, 0xaa, 0x00, 0xa8, 0x2b, 0x51)
+
+// Convert an existing guid you know to be a looking glass guid
+// back into the 16 bit number, so you can store it or use
+// it for smaller comparisons, etc
+#define GET_LG_GUID(_pGuid) (*(ushort *)_pGuid)
+
 
 #endif /* !NO_LG_GUID */
 
