@@ -8,6 +8,7 @@
  *
  */
 
+#include <lg.h>
 #include <math.h>
 #include <cpal.h>
 #include <pal_.h>

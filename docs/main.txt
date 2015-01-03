@@ -1,5 +1,14 @@
 Notes: 2 files names dispbase.h
-
+Notes: 2 files names detect.h
+Notes: 2 files names init.h
+Notes: 2 files names rsd.h
+Notes: 2 files names 
+Notes: 2 files names 
+Notes: 2 files names 
+Notes: 2 files names 
+Notes: 2 files names 
+Notes: 2 files names 
+Notes: 2 files names 
 
 
 cpptools
@@ -93,6 +102,14 @@ $(SolutionDir)tech\libsrc\matrix
 $(SolutionDir)tech\h
 $(SolutionDir)tech\libsrc\lg
 
+dev2d
+$(SolutionDir)tech\libsrc\dev2d
+$(SolutionDir)tech\h
+$(SolutionDir)tech\libsrc\lg
+$(SolutionDir)tech\libsrc\fix
+$(SolutionDir)tech\libsrc\matrix
+$(SolutionDir)tech\libsrc\comtools
+$(SolutionDir)tech\libsrc\compapis
 
 
 

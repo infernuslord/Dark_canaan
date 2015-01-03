@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dispdev", "tech\libsrc\disp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "matrix", "tech\libsrc\matrix\matrix.vcxproj", "{BA234836-D7C7-42A9-8355-37DFBC44C58B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dev2d", "tech\libsrc\dev2d\dev2d.vcxproj", "{CCCD1254-0E24-4B93-B393-D8471B04D05E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -73,6 +75,10 @@ Global
 		{BA234836-D7C7-42A9-8355-37DFBC44C58B}.Debug|Win32.Build.0 = Debug|Win32
 		{BA234836-D7C7-42A9-8355-37DFBC44C58B}.Release|Win32.ActiveCfg = Release|Win32
 		{BA234836-D7C7-42A9-8355-37DFBC44C58B}.Release|Win32.Build.0 = Release|Win32
+		{CCCD1254-0E24-4B93-B393-D8471B04D05E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CCCD1254-0E24-4B93-B393-D8471B04D05E}.Debug|Win32.Build.0 = Debug|Win32
+		{CCCD1254-0E24-4B93-B393-D8471B04D05E}.Release|Win32.ActiveCfg = Release|Win32
+		{CCCD1254-0E24-4B93-B393-D8471B04D05E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

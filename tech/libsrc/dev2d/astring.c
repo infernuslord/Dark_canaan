@@ -1,6 +1,7 @@
 // $Header: x:/prj/tech/libsrc/dev2d/RCS/astring.c 1.2 1997/02/07 11:20:46 KEVIN Exp $
 // Aligned string copy routines.
 
+#include <lg.h>
 #include <astring.h>
 void memcpya(void *d, void *s, int n, void *a)
 {

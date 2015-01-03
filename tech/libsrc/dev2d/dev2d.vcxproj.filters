@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ASM Files">
+      <UniqueIdentifier>{33CCEEE7-D75D-48A7-A031-48AB30BC99A1}</UniqueIdentifier>
+      <Extensions>asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ASM Header Files">
+      <UniqueIdentifier>{0BD0C27C-97F1-4A21-B4AB-C0EEE3548335}</UniqueIdentifier>
+      <Extensions>inc;tbl</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F4F6CA38-701C-4E11-B20A-5703868229B6}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7A56C40B-9E8C-4F3C-AF48-9BEAFE3FF2ED}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{84EEEDD2-5845-48E5-96A7-A31C946C4296}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{77102f43-0d99-40c4-95dc-184dfd66e95e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ASM C Files">
+      <UniqueIdentifier>{afa40b85-5096-470d-9264-e713fee50a10}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="astring.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bank.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bitmap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bk8bm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bk8fl8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bk8hlin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bk8lin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bk8pix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bk8pix8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bk8vlin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="blend.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="canvas.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clpfl8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clut16.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="comdfcn.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cominit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cpal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ddevblt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="devstubs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16bm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16f16.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16fl8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16hlin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16lin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16mono.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16pix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16pix8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16pix16.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16rsd8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16vlin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fcolor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fl8bk8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fl8bm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fl8fl8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fl8hlin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fl8lin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fl8mono.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fl8mx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fl8pix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fl8pix8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fl8rsd8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fl8vlin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gdbm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gdgbm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gdlin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gdpix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gdrect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gdtest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="genbm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="genf16.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="genf16u.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="genfl8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="genfl8u.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="genlin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="genmono.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="genmonou.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="genmx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="genrsd8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gpal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gpix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="grd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="grmalloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="grnull.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hflip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ipal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lpix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ltab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mxbm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mxfl8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mxhlin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mxlatch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mxlin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mxpix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mxpix8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mxvlin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="novinit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nulcnv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nulldfcn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pal16.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rsdcvt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="screen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sfoc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="smode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stastk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="svgainit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tluctab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="valloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vesac.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgastate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vsastate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cstring.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16f16c.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16f16l.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16fl8il.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16il.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="f16set.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="light.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rsdblt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rsdblt8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rsdblt16.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rsdunpck.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vesaasm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgaasm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vgasmod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bitmap.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="bk8cnv.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="bk8hlinf.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="bk8p8f.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="bk8ubmf.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="bk8vlinf.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="comdtab.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="cseg.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="ddevcnv.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="dseg.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="f16cnv.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="f16hlinf.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="f16p8f.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="f16p16f.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="f16ubmf.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="f16vlinf.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="fl8cnv.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="fl8dtab.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="fl8hlinf.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="fl8p8f.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="fl8p16f.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="fl8ubmf.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="fl8vlinf.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="gdican.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="genbmf.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="grd.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="grs.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="lightd.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="mode.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="mxcnv.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="mxhlinf.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="mxp8f.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="mxubmf.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="mxvlinf.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="novdtab.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="rsdblt.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="rsdunpck.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="valloc.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="vesa.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="vgabios.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="vgadtab.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="vgaregs.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="vsadtab.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="w32dtab.tbl">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="Makefile">
+      <Filter>Docs</Filter>
+    </None>
+    <None Include="vesa.h.new">
+      <Filter>Docs</Filter>
+    </None>
+    <None Include="_inst.bat">
+      <Filter>Docs</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="alpha.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="astring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bank.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bank8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bitmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bk8bm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bk8lin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bk8pix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="blnfcn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bmftype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="canvas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="comdfcn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cpal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppify.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ddevblt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="detect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dev2d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="devtab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dftctab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dpmidat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dtabfcn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="emode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="f16bm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="f16il.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="f16lin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="f16pix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fcolor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fill.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fl8bm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fl8lin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fl8pix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="flat8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="flat16.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gdbm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gdlin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gdpix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gdrect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gdulin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="genbm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="general.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="genlin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gpal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="grc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="grd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="grdev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="grmalloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="grnull.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="grs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="icanvas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="idevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="indexmac.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="init.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="linftype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mxbm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mxlatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mxlin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mxpix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pal_.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pal16.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pixftype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rgb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rsd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rsdcfg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="screen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="state.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tluctab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="valloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vesa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vga.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vgareg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="cstring.asm">
+      <Filter>ASM Files</Filter>
+    </MASM>
+    <MASM Include="f16f16c.asm">
+      <Filter>ASM Files</Filter>
+    </MASM>
+    <MASM Include="f16f16l.asm">
+      <Filter>ASM Files</Filter>
+    </MASM>
+    <MASM Include="f16fl8il.asm">
+      <Filter>ASM Files</Filter>
+    </MASM>
+    <MASM Include="f16il.asm">
+      <Filter>ASM Files</Filter>
+    </MASM>
+    <MASM Include="f16set.asm">
+      <Filter>ASM Files</Filter>
+    </MASM>
+    <MASM Include="light.asm">
+      <Filter>ASM Files</Filter>
+    </MASM>
+    <MASM Include="rsdblt.asm">
+      <Filter>ASM Files</Filter>
+    </MASM>
+    <MASM Include="rsdblt8.asm">
+      <Filter>ASM Files</Filter>
+    </MASM>
+    <MASM Include="rsdblt16.asm">
+      <Filter>ASM Files</Filter>
+    </MASM>
+    <MASM Include="rsdunpck.asm">
+      <Filter>ASM Files</Filter>
+    </MASM>
+    <MASM Include="vesaasm.asm">
+      <Filter>ASM Files</Filter>
+    </MASM>
+    <MASM Include="vgaasm.asm">
+      <Filter>ASM Files</Filter>
+    </MASM>
+    <MASM Include="vgasmod.asm">
+      <Filter>ASM Files</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>
