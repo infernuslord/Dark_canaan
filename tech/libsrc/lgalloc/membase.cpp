@@ -6,7 +6,9 @@
 //
 
 #ifdef _WIN32
+#include <lg.h>
 #include <membase.h>
+
 
 #pragma code_seg("lgalloc")
 

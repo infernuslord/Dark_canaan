@@ -1,0 +1,40 @@
+allcguid.cpp	1.2
+dbgalloc.cpp	1.9
+heap.cpp		1.2
+membase.cpp		1.6
+memcore.cpp		1.6
+memtest.cpp		1.2
+memtimer.cpp	1.2	
+multpool.cpp	1.3
+nonover.cpp		1.2
+nullallc.cpp	1.1
+pool.cpp		1.6
+poolimp.cpp		1.8
+primallc.cpp	1.7
+stdalloc.cpp	1.1
+
+memall.c		1.16
+
+allcguid.h		-
+allocapi.h		1.11
+allocovr.h		1.6
+dbgalloc.h		1.5
+dbmem.h			1.2
+fastmutx.h		1.1
+heap.h			1.2
+heaptool.h		1.1
+mallocdb.h		1.1
+memall.h		1.22
+membase.h		1.4
+memcore.h		1.5
+memtimer.h		1.2
+multpool.h		1.3
+nullallc.h		1.1
+pool.h			1.5
+poolimp.h		1.7
+primallc.h		1.2
+stdalloc.h		1.1
+undbmem.h		1.1
+virtmem.h		1.2
+
+memall.inc		1.2

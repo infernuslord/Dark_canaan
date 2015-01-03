@@ -5,5 +5,6 @@
 // $Revision: 1.2 $
 //
 
+#include <types.h>
 #include <initguid.h>
 #include <allcguid.h>

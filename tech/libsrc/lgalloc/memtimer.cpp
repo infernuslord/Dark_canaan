@@ -7,6 +7,8 @@
 
 #if defined(_WIN32) && !defined(SHIP)
 
+#include <lg.h>
+
 #include <memtimer.h>
 #include <memcore.h>
 #include <timings.h>

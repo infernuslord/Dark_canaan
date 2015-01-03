@@ -8,6 +8,7 @@
 #ifndef __MEMBASE_H
 #define __MEMBASE_H
 
+//#include <lg.h>
 #include <comtools.h>
 #include <allocapi.h>
 

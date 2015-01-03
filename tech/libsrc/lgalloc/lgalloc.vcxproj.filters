@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ASM Files">
+      <UniqueIdentifier>{33CCEEE7-D75D-48A7-A031-48AB30BC99A1}</UniqueIdentifier>
+      <Extensions>asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ASM Header Files">
+      <UniqueIdentifier>{0BD0C27C-97F1-4A21-B4AB-C0EEE3548335}</UniqueIdentifier>
+      <Extensions>inc;tbl</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F4F6CA38-701C-4E11-B20A-5703868229B6}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7A56C40B-9E8C-4F3C-AF48-9BEAFE3FF2ED}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{84EEEDD2-5845-48E5-96A7-A31C946C4296}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{77102f43-0d99-40c4-95dc-184dfd66e95e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="allcguid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbgalloc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="heap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memall.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="membase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memcore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memtest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memtimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multpool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nonover.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nullallc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="poolimp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="primallc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdalloc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="allcguid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="allocapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="allocovr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dbgalloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dbmem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fastmutx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="heap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="heaptool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mallocdb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="membase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memcore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memtimer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multpool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nullallc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="poolimp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="primallc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdalloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="undbmem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="virtmem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="memall.inc">
+      <Filter>ASM Header Files</Filter>
+    </None>
+    <None Include="flags.mh">
+      <Filter>Docs</Filter>
+    </None>
+    <None Include="memcore.txt">
+      <Filter>Docs</Filter>
+    </None>
+    <None Include="flags.mk">
+      <Filter>Docs</Filter>
+    </None>
+    <None Include="Makefile">
+      <Filter>Docs</Filter>
+    </None>
+  </ItemGroup>
+</Project>

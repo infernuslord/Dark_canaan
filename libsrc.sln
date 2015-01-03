@@ -5,6 +5,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cpptools", "tech\libsrc\cpp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mprintf", "tech\libsrc\mprintf\mprintf.vcxproj", "{27B0454C-1FFD-47B4-9105-FFA67DD55854}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lgalloc", "tech\libsrc\lgalloc\lgalloc.vcxproj", "{AEC6CA21-F812-4EAE-9C08-56E6F7D3D299}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "comtools", "tech\libsrc\comtools\comtools.vcxproj", "{00F011D9-9492-4876-9687-CA1DDB310D76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +23,14 @@ Global
 		{27B0454C-1FFD-47B4-9105-FFA67DD55854}.Debug|Win32.Build.0 = Debug|Win32
 		{27B0454C-1FFD-47B4-9105-FFA67DD55854}.Release|Win32.ActiveCfg = Release|Win32
 		{27B0454C-1FFD-47B4-9105-FFA67DD55854}.Release|Win32.Build.0 = Release|Win32
+		{AEC6CA21-F812-4EAE-9C08-56E6F7D3D299}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AEC6CA21-F812-4EAE-9C08-56E6F7D3D299}.Debug|Win32.Build.0 = Debug|Win32
+		{AEC6CA21-F812-4EAE-9C08-56E6F7D3D299}.Release|Win32.ActiveCfg = Release|Win32
+		{AEC6CA21-F812-4EAE-9C08-56E6F7D3D299}.Release|Win32.Build.0 = Release|Win32
+		{00F011D9-9492-4876-9687-CA1DDB310D76}.Debug|Win32.ActiveCfg = Debug|Win32
+		{00F011D9-9492-4876-9687-CA1DDB310D76}.Debug|Win32.Build.0 = Debug|Win32
+		{00F011D9-9492-4876-9687-CA1DDB310D76}.Release|Win32.ActiveCfg = Release|Win32
+		{00F011D9-9492-4876-9687-CA1DDB310D76}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
