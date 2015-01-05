@@ -111,10 +111,26 @@ $(SolutionDir)tech\libsrc\matrix
 $(SolutionDir)tech\libsrc\comtools
 $(SolutionDir)tech\libsrc\compapis
 
+entrywin
+$(SolutionDir)tech\libsrc\lg
+$(SolutionDir)tech\h
+$(SolutionDir)tech\libsrc\lgalloc
+
+input
+$(SolutionDir)tech\winsrc\input
+$(SolutionDir)tech\libsrc\lg
+$(SolutionDir)tech\h
+$(SolutionDir)tech\libsrc\lgalloc
+$(SolutionDir)tech\libsrc\comtools
+$(SolutionDir)tech\libsrc\compapis
+$(SolutionDir)tech\libsrc\cpptools
+$(SolutionDir)tech\libsrc\timer
+$(SolutionDir)tech\libsrc\mprintf
+$(SolutionDir)tech\libsrc\fix
+$(SolutionDir)3rdParty\dx70\include
 
 
 others
-$(SolutionDir)tech\libsrc\h
 $(SolutionDir)tech\libsrc\lg
 $(SolutionDir)tech\libsrc\lgalloc
 $(SolutionDir)tech\libsrc\namedres

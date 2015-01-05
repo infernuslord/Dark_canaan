@@ -1,0 +1,14 @@
+p:\v60\include\new
+
+p:\v60\lib\advapi32.lib
+p:\v60\lib\comctl32.lib
+p:\v60\lib\comdlg32.lib
+p:\v60\lib\gdi32.lib
+p:\v60\lib\kernel32.lib
+p:\v60\LIB\LIBCMT.lib
+p:\v60\LIB\libcpmt.lib
+p:\v60\LIB\OLDNAMES.lib
+p:\v60\lib\ole32.lib
+p:\v60\lib\user32.lib
+p:\v60\lib\uuid.lib
+p:\v60\lib\winmm.lib

@@ -1,0 +1,5 @@
+r:\prj\thief2\lib\win32\v60\a611\dbg\ref.lib
+r:\prj\thief2\lib\win32\v60\a611\dbg\script.lib
+
+r:\prj\thief2\lib\win32\v60\a611\dbg\ref.lib
+r:\prj\thief2\lib\win32\v60\a611\dbg\script.lib
