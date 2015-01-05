@@ -5,6 +5,7 @@
 
 #ifdef _WIN32
 #include <windows.h>
+#include <lg.h>
 #include <string.h>
 #include <joywin.h>
 #include <stdio.h>

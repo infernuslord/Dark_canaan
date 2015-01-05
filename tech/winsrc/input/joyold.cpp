@@ -2,6 +2,7 @@
  * $Header: x:/prj/tech/winsrc/input/RCS/joyold.cpp 1.1 1997/10/06 20:46:19 JON Exp $
 */
 
+#include <lg.h>
 #include <stdio.h>
 #include <string.h>
 

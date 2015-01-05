@@ -1,5 +1,6 @@
 // $Header: x:/prj/tech/winsrc/input/RCS/inpman.cpp 1.1 1997/10/06 20:46:12 JON Exp $
 
+#include <lg.h>
 #include <inpman.h>
 #include <inpdynf.h>
 #include <inpcompo.h>

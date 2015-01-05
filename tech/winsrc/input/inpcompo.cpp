@@ -5,6 +5,7 @@
 // $Revision: 1.1 $
 //
 
+#include <Windows.h>
 #include <comtools.h>
 #include <appagg.h>
 #include <inpcompo.h>

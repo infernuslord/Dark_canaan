@@ -9,6 +9,7 @@
  * This file is part of the input library.
  */
 
+#include <lg.h>
 #include <kb.h>
 #include <defehand.h>
 #include <recapi.h>

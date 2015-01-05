@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{343305E7-37EE-426D-8E26-CAD6BA2DD89A}</ProjectGuid>
+    <RootNamespace>input</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)_LibTech\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)_ObjTech\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;WINVER=0x0602;_WIN32_WINNT=0x0602;_MSC_VER=0x1600;_MFC_VER=0x0A00;_CRT_SECURE_NO_WARNINGS;_LIB;NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)tech\libsrc\lg;$(SolutionDir)tech\h;$(SolutionDir)tech\libsrc\lgalloc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WIN32;_WINDOWS;WINVER=0x0602;_WIN32_WINNT=0x0602;_MSC_VER=0x1600;_MFC_VER=0x0A00;_CRT_SECURE_NO_WARNINGS;_LIB;NDEBUG;NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)tech\winsrc\input;$(SolutionDir)tech\libsrc\lg;$(SolutionDir)tech\h;$(SolutionDir)tech\libsrc\lgalloc;$(SolutionDir)tech\libsrc\comtools;$(SolutionDir)tech\libsrc\compapis;$(SolutionDir)tech\libsrc\cpptools;$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\libsrc\mprintf;$(SolutionDir)tech\libsrc\fix;$(SolutionDir)3rdParty\dx70\include</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="defehand.cpp" />
+    <ClCompile Include="fanjoy.cpp" />
+    <ClCompile Include="hatcal.cpp" />
+    <ClCompile Include="inpcompo.cpp" />
+    <ClCompile Include="inpdynf.cpp" />
+    <ClCompile Include="inperr.cpp" />
+    <ClCompile Include="inpguid.c" />
+    <ClCompile Include="inpinit.c" />
+    <ClCompile Include="inpman.cpp" />
+    <ClCompile Include="joyold.cpp" />
+    <ClCompile Include="joystick.cpp" />
+    <ClCompile Include="joywin.cpp" />
+    <ClCompile Include="kbasctab.cpp" />
+    <ClCompile Include="kbcntry.c" />
+    <ClCompile Include="kbcook.cpp" />
+    <ClCompile Include="kbshut.cpp" />
+    <ClCompile Include="kbstart.cpp" />
+    <ClCompile Include="kbsys.cpp" />
+    <ClCompile Include="kbwin.cpp" />
+    <ClCompile Include="mousesys.cpp" />
+    <ClCompile Include="recinput.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="defehand.h" />
+    <ClInclude Include="fanjoy.h" />
+    <ClInclude Include="inpapi.h" />
+    <ClInclude Include="inpbase.h" />
+    <ClInclude Include="inpcompo.h" />
+    <ClInclude Include="inpdynf.h" />
+    <ClInclude Include="inperr.h" />
+    <ClInclude Include="inpface.h" />
+    <ClInclude Include="inpguid.h" />
+    <ClInclude Include="inpinit.h" />
+    <ClInclude Include="inpman.h" />
+    <ClInclude Include="inputimp.h" />
+    <ClInclude Include="joyapi.h" />
+    <ClInclude Include="joynew.h" />
+    <ClInclude Include="joystick.h" />
+    <ClInclude Include="joywin.h" />
+    <ClInclude Include="kb.h" />
+    <ClInclude Include="kbarray.h" />
+    <ClInclude Include="kbcntry.h" />
+    <ClInclude Include="kbcook.h" />
+    <ClInclude Include="kbdecl.h" />
+    <ClInclude Include="kbmod.h" />
+    <ClInclude Include="kbs.h" />
+    <ClInclude Include="kbscan.h" />
+    <ClInclude Include="kbstate.h" />
+    <ClInclude Include="keydefs.h" />
+    <ClInclude Include="mouse.h" />
+    <ClInclude Include="mousedev.h" />
+    <ClInclude Include="mousesys.h" />
+    <ClInclude Include="mousevel.h" />
+    <ClInclude Include="recinput.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

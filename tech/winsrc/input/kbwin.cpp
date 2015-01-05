@@ -5,6 +5,7 @@
  * $Date: 1996/10/10 16:50:07 $
  */
 
+#include <lg.h>
 #include <windows.h>
 
 #include <kbs.h>

@@ -2,11 +2,14 @@
 //		MAHK Leblanc 2/19/93
 /*
  * $Source: x:/prj/tech/winsrc/input/RCS/mouse.h $
- * $Revision: 1.21 $
- * $Author: TOML $
- * $Date: 1996/11/07 14:39:47 $
+ * $Revision: 1.22 $
+ * $Author: JAEMZ $
+ * $Date: 1999/12/27 09:26:28 $
  *
  * $Log: mouse.h $
+ * Revision 1.22  1999/12/27  09:26:28  JAEMZ
+ * Added wheel support
+ * 
  * Revision 1.21  1996/11/07  14:39:47  TOML
  * Improved thread support
  * 
@@ -86,7 +89,8 @@ typedef struct _lgMouseEvent
    uchar type; // Event mask, bits defined below
    ulong timestamp;
    uchar buttons;
-   char pad[6];  // pad to sixteen bytes
+   short wheel; // wheel movement
+   char pad[4];  // pad to sixteen bytes
 } lgMouseEvent;
 
 #if 0
@@ -105,6 +109,7 @@ typedef struct _lgMouseEvent mouse_event;
 #define MOUSE_RUP      16
 #define MOUSE_CDOWN    32
 #define MOUSE_CUP      64
+#define MOUSE_WHEEL   128
 
 
 // Mask of events that are allowed into the queue.

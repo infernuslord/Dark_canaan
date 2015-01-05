@@ -30,6 +30,7 @@ public:
    STDMETHOD(SetAxisRange) (eJoystickObjs axis, long min, long max);
    STDMETHOD(GetAxisRange) (eJoystickObjs axis, long *pMin, long *pMmax);
    STDMETHOD(SetAxisDeadZone) (eJoystickObjs axis, DWORD deadZone);
+   STDMETHOD(SetCooperativeLevel) (BOOL excl, BOOL foreground);
 
    cJoystick();
    virtual ~cJoystick(void);

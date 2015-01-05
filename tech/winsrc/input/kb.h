@@ -2,7 +2,10 @@
 #define __KB_H 
 #ifdef __cplusplus
 extern "C"  {
-#endif  
+#endif
+
+#include <types.h>
+
 typedef struct kbs_event {
    uchar code;
    uchar state;

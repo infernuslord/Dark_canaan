@@ -3,6 +3,8 @@
 //
 // DirectInput implementation of joystick "driver"
 
+
+
 #include <joynew.h>
 #include <inperr.h>
 #include <inpdynf.h>
@@ -176,6 +178,17 @@ STDMETHODIMP cJoystick::SetAxisDeadZone(eJoystickObjs axis, DWORD deadZone)
    }
    return S_OK;
 }
+
+//
+//exclusive/non-exclusive, foreground/background
+//
+STDMETHODIMP cJoystick::SetCooperativeLevel(BOOL excl, BOOL foreground)
+{
+
+
+	return S_OK;
+}
+
 
 cJoystick::cJoystick():
    m_pDev(NULL)

@@ -74,6 +74,7 @@
 extern "C"  {
 #endif  // cplusplus
 
+#include <types.h>
 
 short joy_init( int joy_type );  // returns number of active pots
 uchar joy_read_buttons( void );	// one bit per button

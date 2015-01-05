@@ -1,5 +1,6 @@
 // $Header: x:/prj/tech/libsrc/input/RCS/inpinit.c 1.2 1996/10/17 17:39:20 TOML Exp $
 
+#include <lg.h>
 #include <aggmemb.h>
 #include <appagg.h>
 #include <inpinit.h>
