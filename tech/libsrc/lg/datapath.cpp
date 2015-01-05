@@ -102,10 +102,10 @@ void DatapathFree(Datapath *pdp)
 //	Free all allocated paths
 
 	for (i = 0; i < pdp->numDatapaths; i++)
-		{
+	{
 		if (pdp->datapath[i])
 			Free(pdp->datapath[i]);
-		}
+	}
 
 //	Clear structure to 0
 
