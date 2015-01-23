@@ -1,0 +1,19 @@
+blit.c			1.1
+clip.c			1.3
+comshell.c		1.3
+d3dtest.c		1.20
+render.c		1.26
+setup.c			1.31
+texture.c		1.45
+tmgr.c			1.33
+
+enum.cpp		1.7
+
+d3dmacs.h		-
+d3dpoint.h		1.1
+d3dtest.h		1.3
+lgd3d.h			1.59
+setup.h			1.7
+tdrv.h			1.8
+texture.h		1.6
+tmgr.h			1.18

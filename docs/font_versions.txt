@@ -1,0 +1,18 @@
+chr.h		1.1
+chrsiz.h	1.2
+font.h		-
+fontf.h		1.6
+fonts.h		1.2
+strsiz.h	1.2
+
+chr.c		1.2
+chrclr.c	1.1
+chrsiz.c	1.1
+f16fl8t.c	-
+ftest.c		-
+setup.c		1.1
+str.c		1.2
+strclr.c	1.1
+strscl.c	1.2
+strsiz.c	1.1
+strwrap.c	1.1

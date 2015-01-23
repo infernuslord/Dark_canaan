@@ -1,0 +1,15 @@
+debug.c		1.9
+fancy.c		1.5
+hitdet.c	1.3
+light.c		-
+mipmap.c	1.13
+render.c	1.28
+scale.c		1.6
+shear.c		1.2
+utils.c		1.6
+
+md.h		1.37
+mdd.h		1.4
+mds.h		1.22
+mdutil.h	1.14
+md_.h		1.5

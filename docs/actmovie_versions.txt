@@ -1,0 +1,20 @@
+actmovie.cpp	1.23
+amalloc.cpp		1.3
+amguids.cpp		1.1
+getlgvid.cpp	1.2
+imutil.cpp		1.7
+mtype.cpp		-
+
+actmovie.h		1.8
+amalloc.h		1.3
+amvideo.h		-
+control.h		-
+evcode.h		-
+getlgvid.h		1.1
+imutil.h		1.2
+lgvdguid.h		-
+lgvidapi.h		-
+mtype.h			-
+strmif.h		-
+uuids.h			-
+vfwmsgs.h		-

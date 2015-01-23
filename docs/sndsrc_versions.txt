@@ -1,0 +1,21 @@
+fileseg.cpp		1.2
+imaadpcm.cpp	-
+memseg.cpp		1.3
+playlist.cpp	1.7
+refill.cpp		1.2
+rezseg.cpp		1.1
+sndseg.cpp		1.5
+sndsrc.cpp		1.2
+sndsrcid.cpp	-
+
+playsrc.c		-
+utilmain.c		-
+
+imaadpcm.h		-
+playlist.h		1.7
+sndseg.h		1.3
+sndsegi.h		1.2
+sndsrc.h		1.7
+sndsrci.h		1.4
+sndsrcid.h		-
+utilmain.h		-

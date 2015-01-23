@@ -1,0 +1,7 @@
+render.c	1.37
+skdraw.c	1.5
+skel.c		1.29
+sklist.c	1.2
+
+skel.h		1.32
+_skel.h		1.7

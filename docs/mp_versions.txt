@@ -1,0 +1,21 @@
+abmp.c			-
+abvm.c			-
+mpinit.c		-
+mplist.c		-
+mploco.c		-
+mpmot.c			-
+mpstack.c		-
+mpupdate.c		1.23
+mpvm.c			-
+multiped.c		-
+qt.c			-
+
+motion.h		1.18
+motstruc.h		-
+mp.h			1.1
+mplist.h		-
+mpstack.h		-
+mputil.h		-
+multiped.h		-
+qt.h			-
+appbiped.h		copied from  r:/prj/cam/src/RCS/abpstruc.h 1.3

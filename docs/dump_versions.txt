@@ -1,0 +1,6 @@
+dump.h		1.5
+
+bmpdump.c	1.3
+filefind.c	1.5
+gifdump.c	1.1
+pcxdump.c	1.5

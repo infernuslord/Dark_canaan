@@ -1,0 +1,25 @@
+imaadpcm.cpp
+
+foneshot.c		-
+fsplicer.c		-
+fstremer.c		-
+mstremer.c		-
+onemain.c		-
+oneshot.c		-
+roneshot.c		-
+rsplicer.c		-
+rstremer.c		-
+sndrezst.c		-
+splcmain.c		-
+splicer.c		-
+streamer.c		-
+strmmain.c		-
+utilmain.c		-
+
+imaadpcm.h		-
+oneshot.h		-
+sndrezst.h		-
+sndutil.h		-
+splicer.h		1.4
+streamer.h		-
+utilmain.h		-

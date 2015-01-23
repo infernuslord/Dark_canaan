@@ -1,0 +1,32 @@
+dlgsndi.h		1.1
+dsnddynf.h		1.3
+lgsndi.h		1.32
+lgsndid.h		-
+lgsound.h		1.32
+midiplay.h		-
+midplayi.h		-
+mixerlck.h		1.1
+qlgsndi.h		1.1
+resource.h		-
+sndfmt.h		-
+sndvoc.h		-
+timelog.h		1.13
+wail.h			-
+waildynf.h		1.4
+
+dmixer.cpp		1.2
+dsample.cpp		1.1
+dsnddynf.cpp	1.2
+fade.cpp		1.11
+lgsndid.cpp		-
+midiplay.cpp	1.11
+mixer.cpp		1.47
+qmixer.cpp		1.1
+qsample.cpp		1.1
+sample.cpp		1.52
+sndfmt.cpp		1.12
+sndtest.cpp		-
+timelog.cpp		1.10
+waildynf.cpp	1.4
+
+testsnd1.c		-

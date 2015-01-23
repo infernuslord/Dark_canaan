@@ -1,0 +1,36 @@
+implode.h		-
+lzw.h			1.11
+pkzip.h			1.1
+res.h			1.43
+resagg.h		1.1
+resarq.h		1.9
+rescache.h		1.2
+resguid.h		1.2
+resimpl.h		1.2
+resrect.h		1.2
+resthred.h		1.4
+restypes.h		1.14
+res_.h			1.22
+
+lzw.cpp			1.16
+lzwfd2bf.cpp	1.4
+pkzip.cpp		1.6
+refacc.cpp		1.17
+res.cpp			1.33
+resacc.cpp		1.25
+resarq.cpp		1.19
+resbuild.cpp	1.17
+rescache.cpp	1.12
+rescback.cpp	1.1
+rescum.cpp		1.5
+resexblk.cpp	1.7
+resfile.cpp		1.9
+resload.cpp		1.16
+resmake.cpp		1.5
+resmem.cpp		1.58
+resmisc.cpp		-
+resthred.cpp	1.4
+restypes.cpp	1.14
+
+resagg.c		1.2
+resguid.c		1.2

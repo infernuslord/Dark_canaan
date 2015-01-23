@@ -1,0 +1,216 @@
+f16cnv.tbl		-
+f16llmf.tbl		-
+f16lmf.tbl		-
+f16sf.tbl		-
+f16usf.tbl		-
+fl8cnv.tbl		-
+fl8llmf.tbl		-
+fl8lmf.tbl		-
+fl8sf.tbl		-
+fl8ulf.tbl		-
+fl8usf.tbl		-
+gencnv.tbl		-
+genllmf.tbl		-
+genlmf.tbl		-
+gensf.tbl		-
+genusf.tbl		-
+
+g2spoint.inc	1.1
+icanvas.inc		1.1
+plyparam.inc	1.3
+plyrast.inc		1.1
+plytyp.inc		1.2
+tmapd.inc		1.2
+tmaps.inc		1.2
+
+blncon.h		1.1
+blnfcn.h		1.1
+buffer.h		1.1
+f16tf.h			1.2
+fl8lf.h			1.1
+fl8lin.h		1.1
+fl8sf.h			1.2
+fl8tf.h			1.3
+flat16.h		1.2
+flat8.h			1.3
+frame.h			1.1
+g2.h			-
+g2clip.h		1.4
+g2d.h			1.4
+g2makewr.h		-
+g2pt.h			1.3
+g2spoint.h		1.2
+g2tm.h			1.2
+general.h		1.3
+genrast.h		1.2
+gensf.h			1.2
+gentf.h			1.4
+grchkply.h		1.1
+grcurv.h		1.2
+grlin.h			1.4
+grply.h			1.2
+grscale.h		1.4
+grtm.h			1.5
+icanvas.h		1.1
+ilfunc.h		1.1
+init.h			1.4
+lftype.h		1.1
+mathmac.h		1.4
+permap.h		1.1
+pftype.h		1.1
+plyparam.h		1.5
+plyrast.h		1.1
+plyshell.h		1.3
+plytyp.h		1.2
+point.h			1.2
+poly.h			1.1
+polyint.h		1.2
+profile.h		1.1
+pt.h			1.1
+ptmap.h			1.2
+ptmapper.h		1.1
+pt_asm.h		1.5
+rastel.h		1.1
+raster.h		1.1
+recip.h			1.1
+scale.h			1.1
+scancvt.h		1.1
+scshell.h		1.2
+setdrv.h		1.1
+sftype.h		1.1
+swarn.h			1.1
+tftype.h		1.2
+tmapd.h			1.3
+tmapf.h			1.1
+tmapfcn.h		1.1
+tmaps.h			1.3
+trirast.h		1.5
+water.h			-
+
+area.c			1.4
+blend.c			1.1
+cc816.c			1.3
+chkply.c		1.3
+clip.c			1.3
+clplin.c		1.1
+co88.c			1.2
+cominit.c		1.2
+dlh816.c		1.5
+drytmap.c		1.4
+f16fl8ll.c		1.5	
+f16fl8s.c		1.1
+f16lm.c			1.2
+f16pm.c			1.2
+f16s.c			1.1
+fl8fl8l.c		1.2
+fl8fl8ll.c		1.4
+fl8fl8s.c		1.2
+fl8il.c			1.2
+fl8l.c			1.1
+fl8lin.c		1.1
+fl8lm.c			1.2
+fl8lo2wc.c		-
+fl8nnic.c		-
+fl8o2wic.c		-
+fl8pm.c			1.5
+fl8s.c			1.1
+fl8sply.c		1.2
+g2circ.c		1.1
+g2d.c			1.4
+g2el.c			1.1
+g2makewr.c		1.5
+g2ov.c			1.1
+g2poly.c		1.1
+g2ring.c		1.2
+g2rot.c			-
+g2tm.c			1.4
+gen16il.c		1.3
+gen8il.c		1.1
+genf16l.c		1.6
+genf16s.c		1.1
+genfl8l.c		1.10
+genfl8s.c		1.2
+genil.c			1.6
+genlil.c		1.6
+genline.c		1.1
+genlm.c			1.2
+genply.c		1.3
+genrast.c		1.3
+genrsds.c		1.1
+genrsdtm.c		1.2
+gens.c			1.1
+gensil.c		1.1
+gensply.c		1.4
+golftmap.c		1.5
+grtm.c			1.1
+grwater.c		-
+init.c			1.4
+lh816.c			1.8
+lht816.c		1.2
+lmap.c			1.1
+lo816.c			1.2
+lo88.c			1.7
+o88.c			1.4
+permap.c		1.3
+plyshell.c		1.3
+point.c			1.2
+pt_duv.c		-
+pt_grad.c		1.3
+pt_main.c		1.8
+pt_map.c		1.9
+r88.c			1.2
+rastel.c		1.1
+raster.c		1.1
+scshell.c		1.5
+setdrv.c		1.2
+shadhack.c		1.6
+shadtmap.c		1.7
+svgainit.c		1.1
+t816oc.c		1.2
+t88oc.c			1.4
+tf.c			1.4
+tmapd.c			1.3
+tmsetup.c		1.5
+trifan.c		1.1
+trigrad.c		1.6
+trirast.c		1.5
+chkedgeb.c		-
+chkedges.c		-
+co88il.c		-
+lo816il.c		-
+lo88il.c		-
+n88il.c			-
+o2w88i.c		-
+o88bil.c		-
+o88il.c			-
+ptfloat.c		-
+ptlinear.c		-
+ptmap.c			-
+ptmapper.c		-
+ptmap_8.c		-
+ptmap_n.c		-
+ptpersp.c		-
+uvgrad.c		-
+
+
+chkedgeb.asm
+chkedges.asm
+co88il.asm
+fl8lo2wi.asm
+fl8nni.asm
+fl8o2ni.asm
+fl8o2wi.asm
+lo816il.asm
+lo88il.asm
+n88il.asm
+o2w88i.asm
+o88bil.asm
+o88il.asm
+ptfloat.asm
+ptlinear.asm
+ptmap.asm
+ptmapper.asm
+ptmap_8.asm
+ptmap_n.asm
+ptpersp.asm
+uvgrad.asm
