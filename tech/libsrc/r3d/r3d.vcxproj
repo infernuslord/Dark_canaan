@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6A6361B5-B629-4413-8610-5374C43F247A}</ProjectGuid>
+    <RootNamespace>r3d</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)_LibTech\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)_ObjTech\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;WINVER=0x0602;_WIN32_WINNT=0x0602;_MSC_VER=0x1600;_MFC_VER=0x0A00;_CRT_SECURE_NO_WARNINGS;_LIB;NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WIN32;_WINDOWS;WINVER=0x0602;_WIN32_WINNT=0x0602;_MSC_VER=0x1600;_MFC_VER=0x0A00;_CRT_SECURE_NO_WARNINGS;_LIB;NDEBUG;NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)tech\libsrc\r3d;$(SolutionDir)tech\h;$(SolutionDir)tech\libsrc\lg;$(SolutionDir)tech\libsrc\lgalloc;$(SolutionDir)tech\libsrc\matrix;$(SolutionDir)tech\libsrc\fix;$(SolutionDir)tech\libsrc\dev2d;$(SolutionDir)tech\libsrc\mprintf;$(SolutionDir)tech\libsrc\g2;$(SolutionDir)tech\libsrc\lgd3d</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+    <MASM>
+      <IncludePaths>$(SolutionDir)tech\h;$(SolutionDir)tech\libsrc\dev2d</IncludePaths>
+    </MASM>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="block.c" />
+    <ClCompile Include="clip.c" />
+    <ClCompile Include="clipclip.c" />
+    <ClCompile Include="clipglob.c" />
+    <ClCompile Include="clipplan.c" />
+    <ClCompile Include="clipproj.c" />
+    <ClCompile Include="cliptest.c" />
+    <ClCompile Include="clipunsc.c" />
+    <ClCompile Include="ctxtguts.c" />
+    <ClCompile Include="ctxtmang.c" />
+    <ClCompile Include="ctxtmult.c" />
+    <ClCompile Include="frame.c" />
+    <ClCompile Include="init.c" />
+    <ClCompile Include="object.c" />
+    <ClCompile Include="polytest.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="prim.c" />
+    <ClCompile Include="primconv.c" />
+    <ClCompile Include="primd3d.c" />
+    <ClCompile Include="primface.c" />
+    <ClCompile Include="primfunc.c" />
+    <ClCompile Include="primg2.c" />
+    <ClCompile Include="primmisc.c" />
+    <ClCompile Include="primnull.c" />
+    <ClCompile Include="primpoly.c" />
+    <ClCompile Include="projfast.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="space.c" />
+    <ClCompile Include="utils.c" />
+    <ClCompile Include="view.c" />
+    <ClCompile Include="xfrmclip.c" />
+    <ClCompile Include="xfrmglob.c" />
+    <ClCompile Include="xfrmlin.c" />
+    <ClCompile Include="xfrmproj.c" />
+    <ClCompile Include="xfrmunsc.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="block.h" />
+    <ClInclude Include="clip.h" />
+    <ClInclude Include="clipcon.h" />
+    <ClInclude Include="clipcon_.h" />
+    <ClInclude Include="clipoff.h" />
+    <ClInclude Include="clipplan.h" />
+    <ClInclude Include="clipprim.h" />
+    <ClInclude Include="cliptab.h" />
+    <ClInclude Include="clipu.h" />
+    <ClInclude Include="clip_.h" />
+    <ClInclude Include="ctxtguts.h" />
+    <ClInclude Include="ctxts.h" />
+    <ClInclude Include="grnull.h" />
+    <ClInclude Include="init.h" />
+    <ClInclude Include="object.h" />
+    <ClInclude Include="prim.h" />
+    <ClInclude Include="primcon.h" />
+    <ClInclude Include="primconv.h" />
+    <ClInclude Include="primcon_.h" />
+    <ClInclude Include="primface.h" />
+    <ClInclude Include="primfunc.h" />
+    <ClInclude Include="primpoly.h" />
+    <ClInclude Include="primtab.h" />
+    <ClInclude Include="primtab_.h" />
+    <ClInclude Include="r3d.h" />
+    <ClInclude Include="r3dctxt.h" />
+    <ClInclude Include="r3ds.h" />
+    <ClInclude Include="r3dutil.h" />
+    <ClInclude Include="space.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="view.h" />
+    <ClInclude Include="xform.h" />
+    <ClInclude Include="xfrmtab.h" />
+    <ClInclude Include="_ctxt.h" />
+    <ClInclude Include="_test.h" />
+    <ClInclude Include="_xfrm.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ctxts.inc" />
+    <None Include="Makefile" />
+    <None Include="r3spoint.inc" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="projfast.asm" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
