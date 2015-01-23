@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ASM Files">
+      <UniqueIdentifier>{33CCEEE7-D75D-48A7-A031-48AB30BC99A1}</UniqueIdentifier>
+      <Extensions>asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ASM Header Files">
+      <UniqueIdentifier>{0BD0C27C-97F1-4A21-B4AB-C0EEE3548335}</UniqueIdentifier>
+      <Extensions>inc;tbl</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F4F6CA38-701C-4E11-B20A-5703868229B6}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7A56C40B-9E8C-4F3C-AF48-9BEAFE3FF2ED}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{84EEEDD2-5845-48E5-96A7-A31C946C4296}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{77102f43-0d99-40c4-95dc-184dfd66e95e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="lzw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lzwfd2bf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pkzip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="refacc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="res.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resacc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resagg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resarq.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resbuild.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rescache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rescback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rescum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resexblk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resguid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resload.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resmake.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resmem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resmisc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resthred.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="restypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="flags.mh">
+      <Filter>Docs</Filter>
+    </None>
+    <None Include="Makefile">
+      <Filter>Docs</Filter>
+    </None>
+    <None Include="vtdump.bat">
+      <Filter>Docs</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="implode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lzw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pkzip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="res.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="res_.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resagg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resarq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rescache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resguid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resimpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resrect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resthred.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="restypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
