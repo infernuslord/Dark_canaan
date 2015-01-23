@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CD805967-28F5-4356-81CF-493759474239}</ProjectGuid>
+    <RootNamespace>ui</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)_LibTech\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)_ObjTech\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;WINVER=0x0602;_WIN32_WINNT=0x0602;_MSC_VER=0x1600;_MFC_VER=0x0A00;_CRT_SECURE_NO_WARNINGS;_LIB;NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WIN32;_WINDOWS;WINVER=0x0602;_WIN32_WINNT=0x0602;_MSC_VER=0x1600;_MFC_VER=0x0A00;_CRT_SECURE_NO_WARNINGS;_LIB;NDEBUG;NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)tech\libsrc\ui;$(SolutionDir)tech\h;$(SolutionDir)tech\libsrc\lg;$(SolutionDir)tech\libsrc\dstruct;$(SolutionDir)tech\winsrc\input;$(SolutionDir)tech\libsrc\compapis;$(SolutionDir)tech\libsrc\res;$(SolutionDir)tech\libsrc\lgalloc;$(SolutionDir)tech\libsrc\g2;$(SolutionDir)tech\libsrc\dev2d;$(SolutionDir)tech\libsrc\fix;$(SolutionDir)tech\libsrc\matrix;$(SolutionDir)tech\libsrc\font;$(SolutionDir)tech\libsrc\recorder;$(SolutionDir)tech\libsrc\comtools;$(SolutionDir)tech\libsrc\mprintf</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="butarray.c" />
+    <ClCompile Include="curdrw.c" />
+    <ClCompile Include="cursors.c" />
+    <ClCompile Include="event.c" />
+    <ClCompile Include="gadgets.c" />
+    <ClCompile Include="hotkey.c" />
+    <ClCompile Include="menu.c" />
+    <ClCompile Include="plain.c" />
+    <ClCompile Include="pushbutt.c" />
+    <ClCompile Include="qboxgadg.c" />
+    <ClCompile Include="region.c" />
+    <ClCompile Include="slab.c" />
+    <ClCompile Include="slider.c" />
+    <ClCompile Include="textgadg.c" />
+    <ClCompile Include="texttool.c" />
+    <ClCompile Include="tng.c" />
+    <ClCompile Include="tngbarry.c" />
+    <ClCompile Include="tngfont.c" />
+    <ClCompile Include="tngmenu.c" />
+    <ClCompile Include="tngplain.c" />
+    <ClCompile Include="tngpushb.c" />
+    <ClCompile Include="tngqbox.c" />
+    <ClCompile Include="tngslidr.c" />
+    <ClCompile Include="tngtextg.c" />
+    <ClCompile Include="uires.c" />
+    <ClCompile Include="vmouse.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="barrykey.h" />
+    <ClInclude Include="butarray.h" />
+    <ClInclude Include="curdat.h" />
+    <ClInclude Include="cursors.h" />
+    <ClInclude Include="curtyp.h" />
+    <ClInclude Include="event.h" />
+    <ClInclude Include="fakefont.h" />
+    <ClInclude Include="gadgets.h" />
+    <ClInclude Include="hotkey.h" />
+    <ClInclude Include="libdbg.h" />
+    <ClInclude Include="menu.h" />
+    <ClInclude Include="plain.h" />
+    <ClInclude Include="pushbutt.h" />
+    <ClInclude Include="qboxgadg.h" />
+    <ClInclude Include="region.h" />
+    <ClInclude Include="slab.h" />
+    <ClInclude Include="slider.h" />
+    <ClInclude Include="textgadg.h" />
+    <ClInclude Include="texttool.h" />
+    <ClInclude Include="tng.h" />
+    <ClInclude Include="tngapp.h" />
+    <ClInclude Include="tngbarry.h" />
+    <ClInclude Include="tngfont.h" />
+    <ClInclude Include="tngmenu.h" />
+    <ClInclude Include="tngplain.h" />
+    <ClInclude Include="tngpushb.h" />
+    <ClInclude Include="tngqbox.h" />
+    <ClInclude Include="tngslidr.h" />
+    <ClInclude Include="tngtextg.h" />
+    <ClInclude Include="uires.h" />
+    <ClInclude Include="vmouse.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
