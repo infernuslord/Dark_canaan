@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AB91FE8D-6418-47B6-A5A9-429CD20B58F8}</ProjectGuid>
+    <RootNamespace>timer</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)_LibTech\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)_ObjTech\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;WINVER=0x0602;_WIN32_WINNT=0x0602;_MSC_VER=0x1600;_MFC_VER=0x0A00;_CRT_SECURE_NO_WARNINGS;_LIB;NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WIN32;_WINDOWS;WINVER=0x0602;_WIN32_WINNT=0x0602;_MSC_VER=0x1600;_MFC_VER=0x0A00;_CRT_SECURE_NO_WARNINGS;_LIB;NDEBUG;NO_STRICT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h;$(SolutionDir)tech\libsrc\fix;$(SolutionDir)tech\libsrc\lg;$(SolutionDir)tech\libsrc\lgalloc;$(SolutionDir)tech\libsrc\comtools;$(SolutionDir)tech\libsrc\compapis</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+    <MASM>
+      <IncludePaths>$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</IncludePaths>
+    </MASM>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="tmail.c" />
+    <ClCompile Include="tmftab.c" />
+    <ClCompile Include="tmlibt.c" />
+    <ClCompile Include="tmrt.c" />
+    <ClCompile Include="tmwin32.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="inc2h.bat" />
+    <None Include="Makefile" />
+    <None Include="pic.inc" />
+    <None Include="tmd.inc" />
+    <None Include="tmdecl.inc" />
+    <None Include="tmflag.inc" />
+    <None Include="tmftab.inc" />
+    <None Include="tmhnd.inc" />
+    <None Include="tmlow.inc" />
+    <None Include="tmrec.inc" />
+    <None Include="tmreg.inc" />
+    <None Include="_inst.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="tmdecl.h" />
+    <ClInclude Include="tmftab.h" />
+    <ClInclude Include="tminit.h" />
+    <ClInclude Include="tmmac.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="tmact.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+    </MASM>
+    <MASM Include="tmadd.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+    </MASM>
+    <MASM Include="tmclose.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+    </MASM>
+    <MASM Include="tmd.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+    </MASM>
+    <MASM Include="tmdeact.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+    </MASM>
+    <MASM Include="tmfast.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+    </MASM>
+    <MASM Include="tminit.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+    </MASM>
+    <MASM Include="tmphnd.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+    </MASM>
+    <MASM Include="tmrate.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+    </MASM>
+    <MASM Include="tmrem.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+    </MASM>
+    <MASM Include="tmsden.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+    </MASM>
+    <MASM Include="tmsfreq.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+    </MASM>
+    <MASM Include="tmsper.asm">
+      <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </IncludePaths>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+    </MASM>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
