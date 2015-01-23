@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ASM Files">
+      <UniqueIdentifier>{33CCEEE7-D75D-48A7-A031-48AB30BC99A1}</UniqueIdentifier>
+      <Extensions>asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ASM Header Files">
+      <UniqueIdentifier>{0BD0C27C-97F1-4A21-B4AB-C0EEE3548335}</UniqueIdentifier>
+      <Extensions>inc;tbl</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F4F6CA38-701C-4E11-B20A-5703868229B6}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7A56C40B-9E8C-4F3C-AF48-9BEAFE3FF2ED}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{84EEEDD2-5845-48E5-96A7-A31C946C4296}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{77102f43-0d99-40c4-95dc-184dfd66e95e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fancy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hitdet.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="light.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mipmap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="render.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shear.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="md.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="md_.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mdd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mds.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mdutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile">
+      <Filter>Docs</Filter>
+    </None>
+  </ItemGroup>
+</Project>
