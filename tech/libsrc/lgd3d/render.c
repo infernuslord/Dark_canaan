@@ -574,7 +574,8 @@ static void SetTransparent(int trans)
    SetRenderState(D3DRENDERSTATE_TEXTUREMIN, filter);
    put_mono('.');
 #else
-   void *data, *start;
+   void *data;
+   void *start;
    int size, length;
 
    data = start = get_exebuf_data(0, &size);

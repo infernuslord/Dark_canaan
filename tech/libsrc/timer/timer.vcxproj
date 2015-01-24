@@ -129,6 +129,7 @@
       <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </IncludePaths>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </MASM>
     <MASM Include="tmd.asm">
       <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -149,11 +150,13 @@
       <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </IncludePaths>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </MASM>
     <MASM Include="tmphnd.asm">
       <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </IncludePaths>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)tech\libsrc\timer;$(SolutionDir)tech\h</PreprocessorDefinitions>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </MASM>
     <MASM Include="tmrate.asm">
       <IncludePaths Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

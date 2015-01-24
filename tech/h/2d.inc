@@ -30,7 +30,8 @@ FILL_SOLID              equ     4
 
 GR_UNPACK_RSD8_OK       equ     0
 
-GRS_SCREEN_LTAB         equ     32
+;defined in 2d.inc
+;GRS_SCREEN_LTAB         equ     32
 
 LINE		= 0
 ILINE		= 1
