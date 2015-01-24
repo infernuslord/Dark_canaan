@@ -83,12 +83,14 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <MASM>
-      <IncludePaths>$(SolutionDir)tech\libsrc\star;$(SolutionDir)tech\h;$(SolutionDir)tech\libsrc\lg;$(SolutionDir)tech\libsrc\lgalloc;$(SolutionDir)tech\libsrc\fix;$(SolutionDir)tech\libsrc\dev2d</IncludePaths>
+      <IncludePaths>$(SolutionDir)tech\libsrc\star;$(SolutionDir)tech\h;$(SolutionDir)tech\libsrc\dev2d;$(SolutionDir)tech\libsrc\lg;$(SolutionDir)tech\libsrc\lgalloc;$(SolutionDir)tech\libsrc\fix;$(SolutionDir)tech\libsrc\g2</IncludePaths>
     </MASM>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="star.c" />
-    <ClCompile Include="ststar.c" />
+    <ClCompile Include="ststar.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile" />

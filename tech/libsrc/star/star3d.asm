@@ -16,7 +16,8 @@
 	include	macros.inc
 	include	lg.inc
 	include	3d.inc
-        include fault.inc
+;not found?
+;        include fault.inc
 	.list
 	include	2d.inc
 	assume	cs:_TEXT, ds:_DATA
